@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
 module.exports = {
-  up: async  (queryInterface, DataTypes) => {
-    await queryInterface.createTable('establishments', {
+  up: async (queryInterface, DataTypes) => {
+    await queryInterface.createTable("establishments", {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -29,26 +29,24 @@ module.exports = {
         unique: true,
         type: DataTypes.INTEGER,
         references: {
-                  model: "categories",
-                  key: "id"
-                }
+          model: "categories",
+          key: "id",
+        },
       },
       createdAt: {
         allowNull: false,
         type: DataTypes.DATE,
-        defaultValue: DataTypes.fn('NOW')
-
+        defaultValue: DataTypes.fn("NOW"),
       },
       updatedAt: {
         allowNull: false,
         type: DataTypes.DATE,
-        defaultValue: DataTypes.fn('NOW')
-
-      }
-    })
+        defaultValue: DataTypes.fn("NOW"),
+      },
+    });
   },
 
-  async down (queryInterface, Sequelize) {
-    return queryInterface.dropTable('establishments');
-  }
+  async down(queryInterface, Sequelize) {
+    return queryInterface.dropTable("establishments");
+  },
 };
