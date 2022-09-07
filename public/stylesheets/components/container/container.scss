@@ -1,0 +1,40 @@
+$main-color: #00A85A;
+$secondary-color: #EC3237;
+$light: #FFFAF0;
+$dark: #10140F;
+$shadow-color:#029450;
+
+container {
+    width: 100%;
+    height: 100%;
+    background-color: $light;
+    border-radius: 8px;
+    box-shadow: 11px 10px 13px $shadow-color;
+    .title {
+        width: 100%;
+        height: 110px;
+        padding: 0 48px 0 48px;
+        background-color: $dark;
+        border-radius: 8px 8px 0 0;
+        font-size: 40px;
+        font-weight: bold;
+        color: $light;
+        letter-spacing: 2px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        img {
+            width: 40px;
+        }
+        a {
+            line-height: 0;
+        }
+    }
+    .page {
+        margin: 48px;
+        &hover {
+            cursor: pointer;
+        }
+    }
+}

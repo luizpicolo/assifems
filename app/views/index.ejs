@@ -1,18 +1,72 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="theme-color" content="#00A85A">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="manifest" href="../../manifest.json">
-    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
-    <link rel="apple-touch-icon" href="images/icon_256.png">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- PWA -->
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#00A85A" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" href="images/icon_256.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="stylesheets/global.css" />
+    <link rel="stylesheet" href="stylesheets/components/menu/menu.css" />
+    <link
+      rel="stylesheet"
+      href="stylesheets/components/container/container.css"
+    />
+    <link rel="stylesheet" href="stylesheets/components/footer/footer.css" />
+
+    <!-- Application -->
+    <link rel="manifest" href="manifest.json" />
+    <link rel="shortcut icon" href="images/icon_256.png" type="image/png" />
+
     <title>Carteirinha Digital - ASSIFEMS</title>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <!-- Header -->
+    <header>
+      <div>
+        <img class="assifems" src="/images/assifems.png" />
+      </div>
+
+      <div class="options">
+        <div id="return">
+          <span>Nome de usuário</span
+          ><img class="icon_arrow" src="images/icons/arrow.svg" />
+        </div>
+
+        <div id="more_options">
+          <div class="up">
+            <div>Logado em <b>Nome de usuario</b></div>
+            <div class="selected">Vizualizar carteirinha</div>
+            <div>Estabelecimentos</div>
+            <div>Configurações</div>
+            <div>Sair</div>
+          </div>
+
+          <div class="down">
+            <div>
+              <img class="icon_help" src="images/icons/help_mini.svg" /> Preciso
+              de ajuda
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Div -->
+    <container>
+      <div class="title">
+        CARTEIRINHA DIGITAL<a href="https://wa.me/556781321492"
+          ><img src="images/icons/help.svg"
+        /></a>
+      </div>
+      <div class="page"></div>
+    </container>
+
+    <!-- Footer -->
+    <footer>Desenvolvido por André Lopes, Igor Santana e Juan Silva.</footer>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

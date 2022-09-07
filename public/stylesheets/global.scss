@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$main-color: #00A85A;
+$secondary-color: #EC3237;
+$light: #FFFAF0;
+$dark: #10140F;
+
+$font: 'Outfit', sans-serif;
+
+@mixin flex($direction, $align, $justify){
+
+display: flex;
+flex-direction: $direction;
+align-items: $align;
+justify-content: $justify;
+
+}
+
+*{
+
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+font-family: $font;
+
+}
+
+a{
+
+text-decoration: none;
+color: inherit;
+
+}
+
+
+
+body{
+
+background-color: $main-color;
+@include flex(column, center, start);  
+height: 100vh;
+
+row-gap: 16px;
+padding: 1vw 2vw;
+}
+

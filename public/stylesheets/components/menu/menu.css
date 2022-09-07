@@ -1,0 +1,81 @@
+header {
+  width: 100%;
+  background-color: #fffaf0;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17px;
+}
+header #return {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+header #return span {
+  font-weight: 700;
+}
+header #return .icon_arrow {
+  height: 22px;
+}
+header .assifems {
+  height: 40px;
+  max-width: 100%;
+}
+header .options {
+  position: relative;
+}
+header #more_options {
+  display: none;
+  position: absolute;
+  background-color: #fffaf0;
+  right: 0;
+  border: solid 2px;
+  width: 120%;
+  border-radius: 10px 0 10px 10px;
+  z-index: 1;
+  flex-direction: column;
+  row-gap: 80px;
+  font-weight: 700;
+}
+header #more_options .selected {
+  color: #ec3237 !important;
+  border-bottom: #ec3237 solid 0.5px;
+}
+header #more_options .up div {
+  border-bottom: solid 0.5px;
+  max-width: 100%;
+  transition: 200ms;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+}
+header #more_options .up div:hover {
+  background-color: #10140f;
+  color: #fffaf0;
+  transition: 200ms;
+  cursor: pointer;
+}
+header #more_options .up div:first-child {
+  padding: 20px 10px;
+  border-radius: 6px 0px 0px 0px;
+}
+header #more_options .down {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  transition: 200ms;
+}
+header #more_options .down:hover {
+  transition: 200ms;
+  font-weight: 800;
+  cursor: pointer;
+}
+header #more_options .icon_help {
+  height: 10px;
+}
+header #more_options .icon_help:hover {
+  transition: 200ms;
+  height: 12px;
+  cursor: pointer;
+}/*# sourceMappingURL=menu.css.map */

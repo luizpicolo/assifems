@@ -1,0 +1,23 @@
+header {
+  width: 100%;
+  background-color: #FFFAF0;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px 10px 10px;
+}
+header .return {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+header .assifems {
+  height: 40px;
+  max-width: 100%;
+}
+header .more_options {
+  display: none;
+}/*# sourceMappingURL=menu.css.map */
