@@ -1,0 +1,21 @@
+{
+    "name": "Carteirinha Digital - ASSIFEMS",
+    "short_name": "ASSIFEMS",
+    "icons": [
+        {
+            "src": "images/icon_256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "images/icon_512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "lang": "pt-BR",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "00A85A",
+    "theme_color": "00A85A"
+}

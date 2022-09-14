@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
 module.exports = {
-  up: async  (queryInterface, DataTypes) => {
-    await queryInterface.createTable('associates', {
+  up: async (queryInterface, DataTypes) => {
+    await queryInterface.createTable("associates", {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -14,47 +14,41 @@ module.exports = {
         unique: true,
         type: DataTypes.STRING,
       },
-      birth_date:{
+      birth_date: {
         allowNull: false,
         type: DataTypes.DATE,
       },
-      role:{
+      role: {
         allowNull: false,
         unique: false,
-        type: DataTypes.STRING
-
+        type: DataTypes.STRING,
       },
-      cpf:{
+      cpf: {
         allowNull: false,
         unique: true,
-        type: DataTypes.STRING
-
+        type: DataTypes.STRING,
       },
-      rg:{
+      rg: {
         allowNull: false,
         unique: true,
-        type: DataTypes.STRING
-
+        type: DataTypes.STRING,
       },
-      status:{
+      status: {
         allowNull: false,
-        type: DataTypes.STRING
-
+        type: DataTypes.STRING,
       },
-      validity:{
+      validity: {
         allowNull: false,
-        type: DataTypes.DATE
-
+        type: DataTypes.DATE,
       },
-      siape:{
+      siape: {
         allowNull: false,
         unique: true,
-        type: DataTypes.STRING
-
+        type: DataTypes.STRING,
       },
-    })
+    });
   },
-  down: async (queryInterface)=>{
-    return queryInterface.dropTable('associates');
-  }
+  down: async (queryInterface) => {
+    return await queryInterface.dropTable("associates");
+  },
 };

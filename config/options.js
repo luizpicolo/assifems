@@ -1,4 +1,4 @@
-const { User, Category } = require('../app/models');
+const { User, Category, Establishment, Associate } = require('../app/models');
 const translations = require('./translations');
 
 const resources = [
@@ -12,9 +12,9 @@ const resources = [
       listProperties: ['id', 'name', 'createdAt', 'updatedAt']
     }
   },
-  { resource: Estabilishment, 
+  { resource: Establishment, 
     options: { 
-      listProperties: ['id', 'name', 'cnpj', 'adress', 'createdAt', 'updatedAt']
+      listProperties: ['id', 'name', 'cnpj', 'address', 'createdAt', 'updatedAt']
     }
   },
   { resource: Associate, 

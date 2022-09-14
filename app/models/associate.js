@@ -1,9 +1,6 @@
-const bcrypt = require("bcryptjs");
-
 module.exports = (sequelize, DataTypes) => {
-  
-  const table_name = 'associates';
-  const model_name = 'Associate';
+  const table_name = "associates";
+  const model_name = "Associate";
 
   const Associate = sequelize.define(table_name, {
     name: {
@@ -29,13 +26,12 @@ module.exports = (sequelize, DataTypes) => {
     },
     siape: {
       type: DataTypes.STRING,
-    }
- 
+    },
   });
 
   Associate.model_name = function () {
-    return model_name
+    return model_name;
   };
-  
+
   return Associate;
-}
+};
