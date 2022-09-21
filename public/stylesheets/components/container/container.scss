@@ -4,12 +4,29 @@ $light: #fffaf0;
 $dark: #10140f;
 $shadow-color: #029450;
 
+.red{
+  color: $secondary-color;
+  font-weight: 600;
+}
+.green{
+  color: $main-color;
+  font-weight: 600;
+}
+.green p{
+  font-weight: 400;
+}
+.status{
+  color: $secondary-color;
+  font-weight: 600;
+}
+
 @media screen and (min-width: 600px) {
 
+  container-mobile{
+    display: none;
+  }
 
-
-
-  container {
+  container-desktop {
     width: 100%;
     height: 100%;
     background-color: $light;
@@ -21,6 +38,7 @@ $shadow-color: #029450;
       padding: 0 48px 0 48px;
       background-color: $dark;
       border-radius: 8px 8px 0 0;
+      line-height: 38px;
       font-size: 40px;
       font-weight: bold;
       color: $light;
@@ -46,7 +64,7 @@ $shadow-color: #029450;
     .page {
       width: 100%;
       height: 80%;
-padding: 0 5vw;
+      padding: 0 5vw;
       display: flex;
       align-items: center;
       column-gap: 50px;
@@ -54,25 +72,23 @@ padding: 0 5vw;
     }
 
     .right{
-       display: flex;
-       flex-direction: column;
-       row-gap: 10px;
-width: 100%;
-h1{
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      width: 100%;
+    h1{
     color: $main-color;
-border-bottom: 4px solid $main-color;
+    border-bottom: 4px solid $main-color;
 
 
 }
 
     }
 
-    .red{
-
+.red{
 color: $secondary-color;
 font-weight: 600;
-
-    }
+}
 
 .lines{
 
@@ -106,21 +122,23 @@ font-weight: 700;
 
 
 .status{
-
 color: $secondary-color;
-
 }
 }
   }
 }
 
 @media screen and (max-width: 600px) {
-    .red{
-        color: $secondary-color;
-        font-weight: 600;
+
+    .desktop{
+      display: none;
     }
 
-    container {
+    container-desktop{
+      display: none;
+    }
+
+    container-mobile{
         width: 100%;
         height: 100%;
         background-color: $light;
@@ -131,6 +149,7 @@ color: $secondary-color;
         align-items: center;
         justify-content: center;
         text-align: center;
+        column-gap: 50px;
         .title {
             display: none;
         }
@@ -152,6 +171,9 @@ color: $secondary-color;
                     display: none;
                 }
             }
-        } 
+        }
+        .red{
+          font-size: 5vw;
+        }
     }
 }

@@ -6,18 +6,19 @@
   }
   header {
     background-color: #00a85a;
+    width: 100%;
   }
   header .assifems {
     display: none;
   }
-  header #hamburger {
-    margin-left: 200px;
-  }
   header #return {
     display: none;
   }
-  header #options {
-    position: relative;
+  header .options {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    padding: 2vw;
   }
   header #more_options {
     background-color: #10140f;
@@ -25,17 +26,32 @@
     position: absolute;
     left: 0;
     top: 0;
-    visibility: hidden;
+    display: none;
+    padding: 3vw 4vw;
     max-width: 100%;
+    height: 100%;
+  }
+  header .title_carteirinha {
+    color: #fffaf0;
+    font-size: 5vw;
+  }
+  header .division {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100%;
   }
   header .selected {
     color: #ec3237 !important;
     border-bottom: #ec3237 solid 0.5px;
   }
+  header #close {
+    margin-bottom: 40px;
+  }
   header .up div {
     border-bottom: solid 0.5px;
     max-width: 100%;
+    padding: 10px;
     padding: 5px 10px;
     font-size: 0.9rem;
   }
@@ -44,7 +60,7 @@
     border-radius: 6px 0px 0px 0px;
   }
   header .down {
-    padding: 5px 10px;
+    padding: 0 10px 0 0;
     font-size: 0.8rem;
   }
   header .icon_help {
@@ -84,6 +100,12 @@
   header .options {
     position: relative;
     cursor: pointer;
+  }
+  header .title_carteirinha {
+    display: none;
+  }
+  header #close {
+    display: none;
   }
   header #more_options {
     display: none;

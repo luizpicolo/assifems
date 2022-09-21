@@ -49,6 +49,6 @@ module.exports = {
     });
   },
   down: async (queryInterface) => {
-    return queryInterface.dropTable("associates");
+    return await queryInterface.dropTable("associates");
   },
 };

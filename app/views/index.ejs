@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- PWA -->
     <meta charset="UTF-8" />
     <meta name="theme-color" content="#00A85A" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" href="images/icon_256.png" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="stylesheets/global.css" />
-    <link rel="stylesheet" href="stylesheets/components/menu/menu.css" />
     <link
       rel="stylesheet"
       href="stylesheets/components/container/container.css"
     />
     <link rel="stylesheet" href="stylesheets/components/footer/footer.css" />
-
-    <!-- Application -->
+    <link rel="stylesheet" href="stylesheets/components/menu/menu.css" />
     <link rel="manifest" href="manifest.json" />
     <link rel="shortcut icon" href="images/icon_256.png" type="image/png" />
-
+    <link rel="apple-touch-icon" href="images/icon_256.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Carteirinha Digital - ASSIFEMS</title>
   </head>
   <body>
@@ -32,24 +27,28 @@
       <div class="options">
         <div id="return">
           <span>Nome de usuário</span
-          ><img class="icon_arrow" src="images/icons/arrow.svg" />
+          ><img class="icon_arrow" id="arrow" src="images/icons/arrow.svg" onclick="Menu()"
+          />
         </div>
-
         <img id="hamburger" src="images/icons/hamburger.svg" onclick="Menu()" />
+        <div><h1 class="title_carteirinha">Carteirinha Digital</h1></div>
 
         <div id="more_options" class="animate__animated animate__backInUp">
-          <div class="up">
-            <div>Logado em <b>Nome de usuario</b></div>
-            <div class="selected">Vizualizar carteirinha</div>
-            <div>Estabelecimentos</div>
-            <div>Configurações</div>
-            <div>Sair</div>
-          </div>
+          <div class="division">
+            <div class="up">
+              <img id="close" src="images/icons/close.svg" onclick="Menu()" />
+              <div>Logado em <b>Nome de usuario</b></div>
+              <div class="selected">Vizualizar carteirinha</div>
+              <div><a href="/estabelecimentos">Estabelecimentos</a></div>
+              <div>Configurações</div>
+              <div>Sair</div>
+            </div>
 
-          <div class="down">
-            <div>
-              <img class="icon_help" src="images/icons/help_mini.svg" /> Preciso
-              de ajuda
+            <div class="down">
+              <div>
+                <img class="icon_help" src="images/icons/help_white.svg" />
+                Preciso de ajuda
+              </div>
             </div>
           </div>
         </div>
@@ -57,7 +56,7 @@
     </header>
 
     <!-- Main Div -->
-    <container>
+    <container-desktop>
       <!-- Desktop Title -->
       <div class="title">
         CARTEIRINHA DIGITAL<a href="https://wa.me/556781321492"
@@ -115,35 +114,46 @@
               <span>999.999.999-99</span>
             </div>
             <!--RG End -->
-            </div>  
-            <!-- Second Line End -->
+          </div>
+          <!-- Second Line End -->
 
-            <!--Third Line -->
-            <div class="lines">
-              <!--SIAPE -->
-              <div class="data">
-                <span class="red">SIAPE</span>
-                <span>999.999.999-99</span>
-              </div>
-              <!--SIAPE End -->
-
-              <!--Validity -->
-              <div class="data">
-                <span class="red">Validade da Carteirinha</span>
-                <span>99/99/9999</span>
-              </div>
-              <!--Validity End -->
+          <!--Third Line -->
+          <div class="lines">
+            <!--SIAPE -->
+            <div class="data">
+              <span class="red">SIAPE</span>
+              <span>999.999.999-99</span>
             </div>
-            <!--Third Line End -->
+            <!--SIAPE End -->
+
+            <!--Validity -->
+            <div class="data">
+              <span class="red">Validade da Carteirinha</span>
+              <span>99/99/9999</span>
+            </div>
+            <!--Validity End -->
+          </div>
+          <!--Third Line End -->
         </div>
         <!-- Right Side End -->
       </div>
       <!-- Main Content End -->
-    </container>
+    </container-desktop>
+
+    <!-- Mobile Version -->
+
+    <container-mobile>
+      <div class="photo"></div>
+      <p class="red">Nome e Sobrenome</p>
+      <span><span class="green">Status: </span><span class="status">Inválida</span></span>
+      <p>Data de nascimento</p>
+      <span class="green">99/99/9999</span>
+      <p>Validade da Carteirinha</p>
+      <span class="green">99/99/9999</span>
+    </container-mobile>
 
     <!-- Footer -->
     <footer>Desenvolvido por André Lopes, Igor Santana e Juan Silva.</footer>
-
     <script src="js/script.js"></script>
   </body>
 </html>
