@@ -15,6 +15,10 @@
     <link rel="shortcut icon" href="images/icon_256.png" type="image/png" />
     <link rel="apple-touch-icon" href="images/icon_256.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <title>Carteirinha Digital - ASSIFEMS</title>
   </head>
   <body>
@@ -27,13 +31,17 @@
       <div class="options">
         <div id="return">
           <span>Nome de usuário</span
-          ><img class="icon_arrow" id="arrow" src="images/icons/arrow.svg" onclick="Menu()"
+          ><img
+            class="icon_arrow"
+            id="arrow"
+            src="images/icons/arrow.svg"
+            onclick="Menu()"
           />
         </div>
-        <img id="hamburger" src="images/icons/hamburger.svg" onclick="Menu()" />
+        <img id="hamburger" src="images/icons/hamburger.svg" onclick="Menu()"/>
         <div><h1 class="title_carteirinha">Carteirinha Digital</h1></div>
 
-        <div id="more_options" class="animate__animated animate__backInUp">
+        <div id="more_options">
           <div class="division">
             <div class="up">
               <img id="close" src="images/icons/close.svg" onclick="Menu()" />
@@ -144,12 +152,30 @@
 
     <container-mobile>
       <div class="photo"></div>
-      <p class="red">Nome e Sobrenome</p>
-      <span><span class="green">Status: </span><span class="status">Inválida</span></span>
+      <div>
+      <h1 class=" red">Nome e Sobrenome</h1>
+      <span
+        ><span class="green">Status: </span
+        ><span class="status">Inválida</span></span
+      ></div>
+
+      <div>
       <p>Data de nascimento</p>
       <span class="green">99/99/9999</span>
       <p>Validade da Carteirinha</p>
       <span class="green">99/99/9999</span>
+</div>
+
+
+      <div class="green-box">
+        <p class="green">CPF</p>
+        <span>999.999.999-99</span>
+        <p class="green">RG</p>
+        <span>99.999.999-9</span>
+        <p class="green">SIAPE</p>
+        <span>99.999.999-9</span>
+      </div>
+      <img class="assifems" src="/images/assifems.png" />
     </container-mobile>
 
     <!-- Footer -->

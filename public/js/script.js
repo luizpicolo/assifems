@@ -15,6 +15,7 @@ function Menu() {
     `;
     visibility = false;
   } else {
+
     resp_options.style.display = "none";
     visibility = true;
     icon.style.cssText = `
@@ -22,7 +23,6 @@ function Menu() {
     transition: 500ms;
     `;
   }
-  console.log(visibility);
 
 }
 

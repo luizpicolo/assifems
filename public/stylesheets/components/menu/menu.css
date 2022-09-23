@@ -117,8 +117,16 @@
     border-radius: 10px 0 10px 10px;
     z-index: 1;
     flex-direction: column;
-    row-gap: 80px;
     font-weight: 700;
+  }
+  header #more_options .division {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  header #more_options .down {
+    margin-top: 150px;
   }
   header #more_options .selected {
     color: #ec3237 !important;
