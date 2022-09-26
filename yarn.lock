@@ -1579,7 +1579,10 @@ nodemon@^2.0.20:
   version "2.0.20"
   resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-2.0.20.tgz#e3537de768a492e8d74da5c5813cb0c7486fc701"
   integrity sha512-Km2mWHKKY5GzRg6i1j5OxOHQtuvVsgskLfigG25yTtbyfRGn/GNvIbRyOf1PSCKJ2aT/58TiuUsuOU5UToVViw==
+<<<<<<< HEAD
 >>>>>>> f7f7bbba3907da7c9c6d2833085d8fa5fe711858
+=======
+>>>>>>> main
   dependencies:
     chokidar "^3.5.2"
     debug "^3.2.7"
@@ -2066,10 +2069,17 @@ sequelize-pool@^7.1.0:
   resolved "https://registry.yarnpkg.com/sequelize-pool/-/sequelize-pool-7.1.0.tgz#210b391af4002762f823188fd6ecfc7413020768"
   integrity sha512-G9c0qlIWQSK29pR/5U2JF5dDQeqqHRragoyahj/Nx4KOOQ3CPPfzxnfqFPCSB7x5UgjOgnZ61nSxz+fjDpRlJg==
 
+<<<<<<< HEAD
 sequelize@^6.23.0:
   version "6.23.0"
   resolved "https://registry.yarnpkg.com/sequelize/-/sequelize-6.23.0.tgz#53b5f6052c6a86fbdd5a5610c33895b853b3b5d5"
   integrity sha512-3tDzy43ip41cQ3oKkvv8ZxoDm1ecCVLrLhcq6J/CBuflUdTe4Xmt6NqA1ZrzzdSDhqVlWn8SxkNIxXSjOn6qLQ==
+=======
+sequelize@^6.23.1:
+  version "6.23.1"
+  resolved "https://registry.yarnpkg.com/sequelize/-/sequelize-6.23.1.tgz#5762b471a5efc05fc021e321574335b95c67ae78"
+  integrity sha512-z8EwzAthEfw0kAaFfqjN36DF6EjfUIEScThl2meKTJLgQiRb+I0t+3J7faNAsC/bhQ6GVD4W7dKXP3DOtAjAKg==
+>>>>>>> main
   dependencies:
     "@types/debug" "^4.1.7"
     "@types/validator" "^13.7.1"
@@ -2253,17 +2263,23 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 twilio@^3.82.0:
   version "3.82.0"
   resolved "https://registry.yarnpkg.com/twilio/-/twilio-3.82.0.tgz#591c3964675ed01bd21f0a511f26c05f8033d564"
   integrity sha512-7j21FIb0tq3udzlOitrnMaIBIMrnB0gO9sDzxHytNfZlMAZXWVIRSP3SodU9lxLTVjyZeFLfr7Qqs1Xafo36uQ==
 =======
+=======
+>>>>>>> main
 twilio@^3.82.1:
   version "3.82.1"
   resolved "https://registry.yarnpkg.com/twilio/-/twilio-3.82.1.tgz#77be64dbacefc4bdbb39f7cc2b1b9194f4fb4d89"
   integrity sha512-3OIFYUjd0g25x2uZbCqsuT1o5r1r9o2/VDYcl1s+WS6323wxm/dvcMfAlMnLx0+YfG2XB7XS3u7BWZGNJoxtGA==
+<<<<<<< HEAD
 >>>>>>> f7f7bbba3907da7c9c6d2833085d8fa5fe711858
+=======
+>>>>>>> main
   dependencies:
     axios "^0.26.1"
     dayjs "^1.8.29"

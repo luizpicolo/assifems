@@ -5,13 +5,13 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
-const usuariosRouter = require('./routes/usuarios');
+const establishmentsRouter = require('./routes/establishments');
 
 
 const app = express();
 
 // AdminJS
-// app.use("/admin", require("./admin"))
+app.use("/admin", require("./admin"))
 
 // view engine setup
 app.set('views', path.join(__dirname, 'app/views'));
@@ -24,7 +24,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/usuarios', usuariosRouter);
+app.use('/estabelecimentos', establishmentsRouter);
 
 
 
