@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="theme-color" content="#00A85A" />
+    <!--viewport para designers responsivos (mobo), content é a configuração-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="stylesheets/global.css" />
     <link
@@ -35,16 +36,16 @@
             class="icon_arrow"
             id="arrow"
             src="images/icons/arrow.svg"
-            onclick="Menu()"
+            onclick="menu()"
           />
         </div>
-        <img id="hamburger" src="images/icons/hamburger.svg" onclick="Menu()"/>
+        <img id="hamburger" src="images/icons/hamburger.svg" onclick="menu()" />
         <div><h1 class="title_carteirinha">Carteirinha Digital</h1></div>
 
         <div id="more_options">
           <div class="division">
             <div class="up">
-              <img id="close" src="images/icons/close.svg" onclick="Menu()" />
+              <img id="close" src="images/icons/close.svg" onclick="menu()" />
               <div>Logado em <b>Nome de usuario</b></div>
               <div class="selected">Vizualizar carteirinha</div>
               <div><a href="/estabelecimentos">Estabelecimentos</a></div>
@@ -151,22 +152,30 @@
     <!-- Mobile Version -->
 
     <container-mobile>
+      <!-- Profile Photo -->
       <div class="photo"></div>
+      <!-- Profile Photo End -->
+
+      <!-- Name and Status -->
       <div>
-      <h1 class=" red">Nome e Sobrenome</h1>
-      <span
-        ><span class="green">Status: </span
-        ><span class="status">Inválida</span></span
-      ></div>
+        <h1 class="red">Nome e Sobrenome</h1>
+        <span
+          ><span class="green">Status: </span
+          ><span class="status">Inválida</span></span
+        >
+      </div>
+      <!-- Name and Status End -->
 
+       <!-- Birthdate and Validity -->
       <div>
-      <p>Data de nascimento</p>
-      <span class="green">99/99/9999</span>
-      <p>Validade da Carteirinha</p>
-      <span class="green">99/99/9999</span>
-</div>
+        <p>Data de nascimento</p>
+        <span class="green">99/99/9999</span>
+        <p>Validade da Carteirinha</p>
+        <span class="green">99/99/9999</span>
+      </div>
+       <!-- Birthdate and Validity End -->
 
-
+       <!-- DOCS -->
       <div class="green-box">
         <p class="green">CPF</p>
         <span>999.999.999-99</span>
@@ -176,10 +185,14 @@
         <span>99.999.999-9</span>
       </div>
       <img class="assifems" src="/images/assifems.png" />
+       <!-- DOCS End -->
     </container-mobile>
 
     <!-- Footer -->
     <footer>Desenvolvido por André Lopes, Igor Santana e Juan Silva.</footer>
+    <!-- Footer End -->
+
+    <!-- Scripts -->
     <script src="js/script.js"></script>
   </body>
 </html>

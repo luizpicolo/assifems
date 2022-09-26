@@ -1,12 +1,14 @@
+//imports
 const returnMenu = document.getElementById("return");
 const resp_options = document.getElementById("more_options");
 const icon = document.getElementById("arrow");
 const hamburger = document.getElementById("hamburger");
 const close = document.getElementById("close");
+
+//globals
 var visibility = true;
 
-
-function Menu() {
+function menu() {
   if (visibility) {
     resp_options.style.display = "block";
     icon.style.cssText = `
@@ -15,7 +17,6 @@ function Menu() {
     `;
     visibility = false;
   } else {
-
     resp_options.style.display = "none";
     visibility = true;
     icon.style.cssText = `
@@ -23,7 +24,4 @@ function Menu() {
     transition: 500ms;
     `;
   }
-
 }
-
-
