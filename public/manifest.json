@@ -16,6 +16,6 @@
     "lang": "pt-BR",
     "start_url": "/",
     "display": "standalone",
-    "background_color": "00A85A",
-    "theme_color": "00A85A"
+    "background_color": "#00A85A",
+    "theme_color": "#00A85A"
 }
