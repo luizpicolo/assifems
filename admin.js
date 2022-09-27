@@ -21,7 +21,7 @@ if (process.env.NODE_ENV == 'production'){
       return false
     },
     cookieName: 'adminjs',
-    cookiePassword: 'some-secret-password-used-to-secure-cookie',
+    cookiePassword: process.env.SECRET,
   })
 } else {
   module.exports = adminRouter = AdminJSExpress.buildRouter(adminJs);
