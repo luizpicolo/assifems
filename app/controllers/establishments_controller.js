@@ -3,7 +3,7 @@ const { Establishment } = require('../models');
 exports.list = async function(req, res) {
   // const establishments = await Establishment.findAll();
   // res.json(establishments);
-  res.send("Aqui deve ser implementado")
+  res.json("Aqui deve ser implementado")
 };
 
 // exports.create = async function(req, res) {
