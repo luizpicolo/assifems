@@ -8,9 +8,6 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
-    "@adminjs/sequelize": "^3.0.0",
-    "@adminjs/express": "^5.0.0",
-    "adminjs": "^6.2.4",
     "axios": "^0.27.2",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "~1.4.4",

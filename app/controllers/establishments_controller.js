@@ -1,9 +1,8 @@
 const { Establishment } = require('../models');
 
 exports.list = async function(req, res) {
-  // const establishments = await Establishment.findAll();
-  // res.json(establishments);
-  res.json("Aqui deve ser implementado")
+
+  res.render('establishments')
 };
 
 // exports.create = async function(req, res) {
