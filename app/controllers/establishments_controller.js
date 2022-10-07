@@ -1,5 +1,6 @@
 const { Establishment } = require('../models');
 
+
 exports.list = async function(req, res) {
 
   res.render('establishments')
