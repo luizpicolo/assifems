@@ -27,16 +27,46 @@
     display: flex;
     flex-direction: column;
     gap: 3vw;
+    overflow-y: scroll;
   }
   .container .card {
     display: flex;
-    justify-content: space-between;
     gap: 10px;
     background-color: #fffaf0;
     border-radius: 8px;
     min-width: 25vw;
-    max-height: 212px;
+    min-height: 128px;
     padding: 12px;
+  }
+  .container .card .info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .container .card .info .name {
+    font-size: 18px;
+    color: #00a85a;
+  }
+  .container .card .info .category {
+    font-size: 14px;
+    color: #ec3237;
+  }
+  .container .card .info .address {
+    font-size: 14px;
+    color: #00a85a;
+  }
+  .container .card .info button {
+    border: 0;
+    background-color: #ec3237;
+    color: #fffaf0;
+    border-radius: 4px;
+    width: 100%;
+    padding: 4px 0;
+    font-size: 18px;
+  }
+  .container .card .info button:hover {
+    background-color: #d12a2f;
   }
   .container .card .name {
     font-size: 18px;
@@ -65,7 +95,7 @@
   .container .card .photo {
     background-color: #10140f;
     border-radius: 8px;
-    width: 50%;
+    width: 128px;
     aspect-ratio: 1/1;
   }
   .container::-webkit-scrollbar {
@@ -189,8 +219,14 @@
     background-color: #fffaf0;
     border-radius: 8px;
     height: 50vh;
-    min-width: 25vw;
+    max-width: 25vw;
     padding: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .container .card:hover {
+    box-shadow: 11px 10px 13px #029450;
+    transition: 0.3s;
   }
   .container .card .photo {
     background-color: #10140f;
@@ -206,14 +242,14 @@
   }
   .container .card .info .name {
     color: #00a85a;
-    font-size: 180%;
+    font-size: 140%;
   }
   .container .card .info .address {
     color: #00a85a;
-    font-size: 130%;
+    font-size: 100%;
   }
   .container .card .info .category {
-    font-size: 130%;
+    font-size: 100%;
     color: #ec3237;
   }
   .container .card button {
@@ -224,8 +260,11 @@
     width: 100%;
     padding: 10px 0;
     font-size: 130%;
+    transition: 0.3s;
   }
   .container .card button:hover {
     background-color: #d12a2f;
+    cursor: pointer;
+    transition: 0.3s;
   }
 }/*# sourceMappingURL=establishments.css.map */
