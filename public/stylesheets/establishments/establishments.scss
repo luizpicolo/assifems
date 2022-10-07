@@ -15,6 +15,11 @@ $shadow-color: #029450;
   .title_estabelecimentos {
     display: none;
   }
+  #filter_options {
+    display: none;
+  }
+
+  
 }
 
 @media screen and (min-width: 600px) {
@@ -36,10 +41,9 @@ $shadow-color: #029450;
     justify-content: flex-end;
     column-gap: 7px;
 
-    img, span{
-        cursor: pointer;
-
-
+    img,
+    span {
+      cursor: pointer;
     }
   }
   #filter_options {
@@ -52,18 +56,55 @@ $shadow-color: #029450;
     position: absolute;
     height: 100%;
 
+    .row {
+      display: flex;
+      column-gap: 12vw;
+      padding: 25px;
+      align-items: center;
 
-    .row{
-        display: flex;
-        align-items: center;
-
-        h1 {
-            font-weight: 300;
-          }
+      h1 {
+        font-weight: 300;
+      }
     }
-    .column{
-        display: flex;
-        flex-direction: column;
+    .column {
+      display: flex;
+      padding: 25px;
+      flex-direction: column;
+      row-gap: 10px;
+      h1 {
+        font-weight: 500;
+      }
+      input{
+        margin-left: 10px;
+        width: 15px;
+        height: 15px;
+      }
+    }
+    .button{
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      padding: 10px;
+    }
+    .filter{
+      background-color: #d12a2f;
+      border: none;
+      color: white;
+      font-weight: 300;
+      height: 2.5vw;
+      &:hover{
+        transform: scale(1.5);
+      }
+    }
+    .clear{
+      background-color: $dark;
+      border: 1px solid #d12a2f;
+      color: white;
+      font-weight: 300;
+      height: 2.5vw;
+    }
+
+
     }
   }
 
@@ -75,24 +116,66 @@ $shadow-color: #029450;
     justify-content: center;
     flex-wrap: wrap;
     overflow-y: scroll;
-    padding: 0 20px 0 0;
 
+
+   &::-webkit-scrollbar{
+
+    width: 10px;
+   }
+
+   &::-webkit-scrollbar-track{
+
+    background: transparent;
+   }
+
+   &::-webkit-scrollbar-thumb{
+
+    background-color: $shadow-color;
+    border-radius: 6px;
+   }
     .card {
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       row-gap: 10px;
       background-color: $light;
       border-radius: 8px;
-max-height: 50vh;
+      height: 50vh;
       min-width: 25vw;
-      padding: 1vw;
+      padding: 20px;
 
       .photo {
         background-color: $dark;
         border-radius: 8px;
+        width: 100%;
         aspect-ratio: 1/1;
       }
+      .info{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        row-gap: 5px;
+        
+.name{
 
+color: $main-color;
+font-size: 180%;
+  
+}
+.address{
+  color: $main-color;
+  font-size: 100%;
+
+}
+.category{
+  font-size: 100%;
+color: $secondary-color;
+
+}
+
+              }
+        
       button {
         border: 0;
         background-color: $secondary-color;
@@ -100,7 +183,7 @@ max-height: 50vh;
         border-radius: 4px;
         width: 100%;
         padding: 10px 0;
-        font-size: 1vw;
+        font-size: 130%;
 
         &:hover {
           background-color: #d12a2f;
@@ -108,4 +191,4 @@ max-height: 50vh;
       }
     }
   }
-}
+
