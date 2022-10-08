@@ -21,6 +21,70 @@
   }
   #filter_options {
     display: none;
+    background-color: #10140f;
+    color: #fffaf0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    width: 70%;
+    position: absolute;
+    height: 100%;
+  }
+  #filter_options .row {
+    display: flex;
+    -moz-column-gap: 25vw;
+         column-gap: 25vw;
+    padding: 25px;
+    align-items: center;
+  }
+  #filter_options .row h1 {
+    font-size: 25px;
+    font-weight: 300;
+  }
+  #filter_options .column {
+    display: flex;
+    padding: 25px;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  #filter_options .column h1 {
+    font-size: 25px;
+    font-weight: 500;
+  }
+  #filter_options .column input {
+    margin-left: 10px;
+    width: 15px;
+    height: 15px;
+  }
+  #filter_options .button {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 10px;
+  }
+  #filter_options .filter {
+    background-color: #ec3237;
+    border: none;
+    color: white;
+    font-weight: 300;
+    height: 6.5vw;
+    transition: 500ms;
+  }
+  #filter_options .filter:hover {
+    transform: scale(1.1);
+    transition: 500ms;
+  }
+  #filter_options .clear {
+    background-color: #10140f;
+    border: 1px solid #ec3237;
+    color: #fffaf0;
+    font-weight: 300;
+    height: 6.5vw;
+    transition: 500ms;
+  }
+  #filter_options .clear:hover {
+    transform: scale(1.1);
+    transition: 500ms;
   }
   .container {
     width: 100%;
@@ -181,9 +245,11 @@
     color: white;
     font-weight: 300;
     height: 2.5vw;
+    transition: 500ms;
   }
   #filter_options .filter:hover {
-    transform: scale(1.5);
+    transform: scale(1.1);
+    transition: 500ms;
   }
   #filter_options .clear {
     background-color: #10140f;
@@ -191,6 +257,11 @@
     color: #fffaf0;
     font-weight: 300;
     height: 2.5vw;
+    transition: 500ms;
+  }
+  #filter_options .clear:hover {
+    transform: scale(1.1);
+    transition: 500ms;
   }
   .container {
     width: 100%;

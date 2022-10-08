@@ -37,6 +37,70 @@ $shadow-color: #029450;
 
   #filter_options {
     display: none;
+    background-color: $dark;
+    color: $light;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    width: 70%;
+    position: absolute;
+    height: 100%;
+    .row {
+      display: flex;
+      column-gap: 25vw;
+      padding: 25px;
+      align-items: center;
+
+      h1 {
+        font-size: 25px;
+        font-weight: 300;
+      }
+    }
+    .column {
+      display: flex;
+      padding: 25px;
+      flex-direction: column;
+      row-gap: 10px;
+      h1 {
+        font-size: 25px;
+        font-weight: 500;
+      }
+      input {
+        margin-left: 10px;
+        width: 15px;
+        height: 15px;
+      }
+    }
+    .button {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      padding: 10px;
+    }
+    .filter {
+      background-color: $secondary-color;
+      border: none;
+      color: white;
+      font-weight: 300;
+      height: 6.5vw;
+      transition: 500ms;
+      &:hover {
+        transform: scale(1.1);
+        transition: 500ms;
+      }
+    }
+    .clear {
+      background-color: $dark;
+      border: 1px solid $secondary-color;
+      color: $light;
+      font-weight: 300;
+      height: 6.5vw;
+    transition: 500ms;
+    &:hover {
+      transform: scale(1.1);
+      transition: 500ms;
+    }
+  }
   }
 
   .container {
@@ -44,7 +108,7 @@ $shadow-color: #029450;
     display: flex;
     flex-direction: column;
     gap: 3vw;
-    overflow-y: scroll; 
+    overflow-y: scroll;
 
     .card {
       display: flex;
@@ -61,7 +125,7 @@ $shadow-color: #029450;
         width: 100%;
         justify-content: space-between;
 
-        .name{
+        .name {
           font-size: 18px;
           color: $main-color;
         }
@@ -69,11 +133,11 @@ $shadow-color: #029450;
           font-size: 14px;
           color: $secondary-color;
         }
-        .address{
+        .address {
           font-size: 14px;
           color: $main-color;
         }
-  
+
         button {
           border: 0;
           background-color: $secondary-color;
@@ -82,14 +146,14 @@ $shadow-color: #029450;
           width: 100%;
           padding: 4px 0;
           font-size: 18px;
-  
+
           &:hover {
             background-color: #d12a2f;
           }
         }
       }
 
-  .name{
+      .name {
         font-size: 18px;
         color: $main-color;
       }
@@ -97,7 +161,7 @@ $shadow-color: #029450;
         font-size: 14px;
         color: $secondary-color;
       }
-      .address{
+      .address {
         font-size: 14px;
         color: $main-color;
       }
@@ -115,7 +179,7 @@ $shadow-color: #029450;
           background-color: #d12a2f;
         }
       }
-        
+
       .photo {
         background-color: $dark;
         border-radius: 8px;
@@ -124,21 +188,19 @@ $shadow-color: #029450;
       }
     }
 
-    &::-webkit-scrollbar{
+    &::-webkit-scrollbar {
       background: transparent;
       width: 0px;
-     }
-  
-     &::-webkit-scrollbar-track{
-  
+    }
+
+    &::-webkit-scrollbar-track {
       background: transparent;
-     }
-  
-     &::-webkit-scrollbar-thumb{
-  
+    }
+
+    &::-webkit-scrollbar-thumb {
       background: $main-color;
       border-radius: 6px;
-     }
+    }
   }
 }
 
@@ -195,39 +257,43 @@ $shadow-color: #029450;
       h1 {
         font-weight: 500;
       }
-      input{
+      input {
         margin-left: 10px;
         width: 15px;
         height: 15px;
       }
     }
-    .button{
+    .button {
       display: flex;
       flex-direction: column;
       row-gap: 10px;
       padding: 10px;
     }
-    .filter{
+    .filter {
       background-color: $secondary-color;
       border: none;
       color: white;
       font-weight: 300;
       height: 2.5vw;
-      &:hover{
-        transform: scale(1.5);
+      transition: 500ms;
+      &:hover {
+        transform: scale(1.1);
+        transition: 500ms;
       }
     }
-    .clear{
+    .clear {
       background-color: $dark;
       border: 1px solid $secondary-color;
       color: $light;
       font-weight: 300;
       height: 2.5vw;
+    transition: 500ms;
+    &:hover {
+      transform: scale(1.1);
+      transition: 500ms;
     }
-
-
-    }
-  
+  }
+  }
 
   .container {
     width: 100%;
@@ -238,22 +304,18 @@ $shadow-color: #029450;
     flex-wrap: wrap;
     overflow-y: scroll;
 
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
 
-   &::-webkit-scrollbar{
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
 
-    width: 10px;
-   }
-
-   &::-webkit-scrollbar-track{
-
-    background: transparent;
-   }
-
-   &::-webkit-scrollbar-thumb{
-
-    background-color: $shadow-color;
-    border-radius: 6px;
-   }
+    &::-webkit-scrollbar-thumb {
+      background-color: $shadow-color;
+      border-radius: 6px;
+    }
     .card {
       display: flex;
       flex-direction: column;
@@ -264,12 +326,12 @@ $shadow-color: #029450;
       height: 50vh;
       max-width: 25vw;
       padding: 20px;
-      transition: .3s;
+      transition: 0.3s;
       cursor: pointer;
 
-      &:hover{
+      &:hover {
         box-shadow: 11px 10px 13px #029450;
-        transition: .3s;
+        transition: 0.3s;
       }
 
       .photo {
@@ -278,32 +340,26 @@ $shadow-color: #029450;
         width: 100%;
         aspect-ratio: 1/1;
       }
-      .info{
-        
+      .info {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         row-gap: 5px;
-        
-.name{
 
-color: $main-color;
-font-size: 140%;
-  
-}
-.address{
-  color: $main-color;
-  font-size: 100%;
+        .name {
+          color: $main-color;
+          font-size: 140%;
+        }
+        .address {
+          color: $main-color;
+          font-size: 100%;
+        }
+        .category {
+          font-size: 100%;
+          color: $secondary-color;
+        }
+      }
 
-}
-.category{
-  font-size: 100%;
-color: $secondary-color;
-
-}
-
-              }
-        
       button {
         border: 0;
         background-color: $secondary-color;
@@ -312,12 +368,12 @@ color: $secondary-color;
         width: 100%;
         padding: 10px 0;
         font-size: 130%;
-        transition: .3s;
+        transition: 0.3s;
 
         &:hover {
           background-color: #d12a2f;
           cursor: pointer;
-          transition: .3s;
+          transition: 0.3s;
         }
       }
     }

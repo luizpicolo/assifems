@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Establishment.associate = function (models) {
-    Establishment.belongsTo(models.Establishment, { as: "establishments" });
+    Establishment.belongsTo(models.Categories, { as: "categories" });
   };
 
   Establishment.model_name = function () {
