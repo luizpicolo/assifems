@@ -42,7 +42,6 @@
               <div>Logado em <b>Nome de usuario</b></div>
               <div><a href="/">Vizualizar carteirinha</a></div>
               <div class="selected"><a href="/estabelecimentos">Estabelecimentos</a></div>
-              <div>Configurações</div>
               <div>Sair</div>
             </div>
 
@@ -97,95 +96,20 @@
 
 
     <div class="container">
-      <div class="card">
-        <div class="photo"></div>
-        <div class="info">
-        <h1 class="name">Nome do Estabelecimento</h1>
-        <h3 class="category">Ramo de Atividade</h3>
-        <h3 class="address">Rua XXXXXXXX XXXXXXXX 9999 - Bairro</h3>
-        <button>Entrar em Contato</button></div>
-      </div>
 
-      <div class="card">
-        <div class="photo"></div>
-        <div class="info">
-        <h1 class="name">Nome do Estabelecimento</h1>
-        <h3 class="category">Ramo de Atividade</h3>
-        <h3 class="address">Rua XXXXXXXX XXXXXXXX 9999 - Bairro</h3>
-        <button>Entrar em Contato</button></div>
-      </div>
+      <% retorna.forEach(function(establishment){ %>
+      <div class="card"> 
+       <div class="photo"></div>
+       <div class="info"> 
+          <h1 class="name"><%= establishment.name %></h1> 
+          <h3 class="category">Ramo de Atividade</h3> 
+          <h3 class="address"><%= establishment.address %></h3> 
+          <button>Entrar em Contato</button></div> 
+          </div>
 
-      <div class="card">
-        <div class="photo"></div>
-        <div class="info">
-        <h1 class="name">Nome do Estabelecimento</h1>
-        <h3 class="category">Ramo de Atividade</h3>
-        <h3 class="address">Rua XXXXXXXX XXXXXXXX 9999 - Bairro</h3>
-        <button>Entrar em Contato</button></div>
-      </div>
+      <% }); %>
 
-      <div class="card">
-        <div class="photo"></div>
-        <div class="info">
-        <h1 class="name">Nome do Estabelecimento</h1>
-        <h3 class="category">Ramo de Atividade</h3>
-        <h3 class="address">Rua XXXXXXXX XXXXXXXX 9999 - Bairro</h3>
-        <button>Entrar em Contato</button></div>
-      </div>
-
-      <div class="card">
-        <div class="photo"></div>
-        <div class="info">
-        <h1 class="name">Nome do Estabelecimento</h1>
-        <h3 class="category">Ramo de Atividade</h3>
-        <h3 class="address">Rua XXXXXXXX XXXXXXXX 9999 - Bairro</h3>
-        <button>Entrar em Contato</button></div>
-      </div>
-
-      <div class="card">
-        <div class="photo"></div>
-        <div class="info">
-        <h1 class="name">Nome do Estabelecimento</h1>
-        <h3 class="category">Ramo de Atividade</h3>
-        <h3 class="address">Rua XXXXXXXX XXXXXXXX 9999 - Bairro</h3>
-        <button>Entrar em Contato</button></div>
-      </div>
-
-      <div class="card">
-        <div class="photo"></div>
-        <div class="info">
-        <h1 class="name">Nome do Estabelecimento</h1>
-        <h3 class="category">Ramo de Atividade</h3>
-        <h3 class="address">Rua XXXXXXXX XXXXXXXX 9999 - Bairro</h3>
-        <button>Entrar em Contato</button></div>
-      </div>
-
-      <div class="card">
-        <div class="photo"></div>
-        <div class="info">
-        <h1 class="name">Nome do Estabelecimento</h1>
-        <h3 class="category">Ramo de Atividade</h3>
-        <h3 class="address">Rua XXXXXXXX XXXXXXXX 9999 - Bairro</h3>
-        <button>Entrar em Contato</button></div>
-      </div>
-
-      <div class="card">
-        <div class="photo"></div>
-        <div class="info">
-        <h1 class="name">Nome do Estabelecimento</h1>
-        <h3 class="category">Ramo de Atividade</h3>
-        <h3 class="address">Rua XXXXXXXX XXXXXXXX 9999 - Bairro</h3>
-        <button>Entrar em Contato</button></div>
-      </div>
-
-      <div class="card">
-        <div class="photo"></div>
-        <div class="info">
-        <h1 class="name">Nome do Estabelecimento</h1>
-        <h3 class="category">Ramo de Atividade</h3>
-        <h3 class="address">Rua XXXXXXXX XXXXXXXX 9999 - Bairro</h3>
-        <button>Entrar em Contato</button></div>
-      </div>
+     
     </div>
 
     <!-- Footer -->
