@@ -21,7 +21,6 @@ module.exports = {
       },
       adress: {
         allowNull: false,
-        unique: true,
         type: DataTypes.STRING,
       },
       categoryId: {

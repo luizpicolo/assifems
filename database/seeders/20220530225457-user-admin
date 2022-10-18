@@ -3,12 +3,21 @@ const bcrypt = require("bcryptjs");
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.bulkInsert('users', [{
+    await queryInterface.bulkInsert('users', [
+      {
       name: 'admin',
       email: 'admin123@admin.com.br',
       password: await bcrypt.hash('12345678', bcrypt.genSaltSync(8)),
-      admin: true
-    }], {});
+      admin: true,
+      role: 'admin',
+      cpf: 'admin',
+      rg: 'admin',
+      status: 'admin',
+      validity: '2022-12-12',
+      siape: 'admin',
+
+    }
+  ], {});
   },
 
   async down (queryInterface, Sequelize) {

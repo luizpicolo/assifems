@@ -3,13 +3,21 @@
 module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.bulkInsert('establishments', [
-      {name: 'dentista'},
-      {name: 'escola'},
-      {name: 'farmacia'}
+      {name: 'florai',
+    cnpj: '741202974',
+    address: 'rua da saudade',
+    categoryId: 1
+    },
+    {name: 'W3',
+    cnpj: '741202',
+    address: 'rua da saudade',
+    categoryId: 2
+    }
+     
   ], {});
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface.bulkDelete('categories', null, {});
+    await queryInterface.bulkDelete('establishments', null, {});
   }
 };
