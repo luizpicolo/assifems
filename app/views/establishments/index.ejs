@@ -84,18 +84,24 @@
       <div class="column">
         <h1>Categorias</h1>
 
-        <form action="/establishment" method="post">
+        <form action="/estabelecimentos" method="post">
           <% categories.forEach(function(category){ %>
           <div>
-            <input type="checkbox" id="farmacia" name="farmacia" value="" />
+            <input
+              type="checkbox"
+              id="<%= category.name %>"
+              name="category"
+              value="<%= category.id %>"
+            />
             <label for="farmacia"><%= category.name %></label>
           </div>
           <% }); %>
+
+          <div class="button">
+            <button class="filter" type="submit">FILTRAR</button>
+            <button class="clear">LIMPAR</button>
+          </div>
         </form>
-        <div class="button">
-          <button class="filter">FILTRAR</button>
-          <button class="clear">LIMPAR</button>
-        </div>
       </div>
     </div>
 

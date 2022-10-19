@@ -9,9 +9,13 @@ exports.list = async function(req, res) {
   res.render('establishments', {establishments, categories});
 };
 
-// exports.create = async function(req, res) {
-//   res.send("Aqui deve ser implementado")
-// };
+exports.filter = async function(req, res) {
+  const establishments = await Establishment.findAll(
+   { where: {categoryId: req.body.category}}
+  );
+  const categories = await Category.findAll();
+  res.render('establishments', {establishments, categories});
+};
 
 // exports.find = async function(req, res) {
 //   res.send("Aqui deve ser implementado" + req.params.id)
