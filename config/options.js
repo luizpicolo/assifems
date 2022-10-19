@@ -36,7 +36,7 @@ const options = {
   branding: {
     companyName: 'ASSIFEMS - IFMS',
     softwareBrothers: false,
-    logo: '/images/logo.png',
+    logo: '/images/assifems.png',
   },
 }
 
