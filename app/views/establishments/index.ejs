@@ -58,8 +58,10 @@
     <h1 class="title_estabelecimentos">ESTABELECIMENTOS</h1>
     <input
       class="input_estabelecimentos"
+      id="searchInput"
       type="text"
       placeholder="Pesquisar Estabelecimento..."
+      onkeyup="search()"
     />
     <div class="class_filter">
       <img src="images/icons/filter.svg" onclick="filtrar()" /><span
@@ -83,25 +85,12 @@
         <h1>Categorias</h1>
 
         <form action="/establishment" method="post">
+          <% categories.forEach(function(category){ %>
           <div>
-            <input type="checkbox" id="farmacia" name="farmacia" />
-            <label for="farmacia">Farmácia</label>
+            <input type="checkbox" id="farmacia" name="farmacia" value="" />
+            <label for="farmacia"><%= category.name %></label>
           </div>
-
-          <div>
-            <input type="checkbox" id="supermercados" name="supermercados" />
-            <label for="supermercados">Supermercados</label>
-          </div>
-
-          <div>
-            <input type="checkbox" id="dentista" name="dentista" />
-            <label for="dentista">Dentista</label>
-          </div>
-
-          <div>
-            <input type="checkbox" id="vestuario" name="vestuario" />
-            <label for="vestuario">Vestuário</label>
-          </div>
+          <% }); %>
         </form>
         <div class="button">
           <button class="filter">FILTRAR</button>
@@ -110,7 +99,7 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="container">
       <% establishments.forEach(function(establishment){ %>
       <div class="card">
         <div class="photo"></div>
@@ -121,7 +110,6 @@
           <button>Entrar em Contato</button>
         </div>
       </div>
-
       <% }); %>
     </div>
 
@@ -131,5 +119,26 @@
 
     <!-- Scripts -->
     <script src="js/script.js"></script>
+    <script>
+      function search() {
+        // Declare variables
+        var input, filter, container, card, name, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        container = document.getElementById("container");
+        card = container.getElementsByClassName("card");
+console.log(container);
+        // Loop through all list items, and hide those who don't match the search query
+        for (i = 0; i < card.length; i++) {
+          name = card[i].getElementsByTagName("h1")[0];
+          txtValue = name.textContent || name.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            card[i].style.display = "";
+          } else {
+            card[i].style.display = "none";
+          }
+        }
+      }
+    </script>
   </body>
 </html>

@@ -1,10 +1,12 @@
 const { Establishment } = require('../models');
+const { Category } = require('../models');
 
 
 exports.list = async function(req, res) {
 
   const establishments = await Establishment.findAll();
-  res.render('establishments', {establishments});
+  const categories = await Category.findAll();
+  res.render('establishments', {establishments, categories});
 };
 
 // exports.create = async function(req, res) {
