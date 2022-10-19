@@ -187,6 +187,7 @@
     font-size: 15px;
     color: #10140f;
     padding: 10px 0 10px 50px;
+    outline: none;
   }
   .class_filter {
     width: 100%;
