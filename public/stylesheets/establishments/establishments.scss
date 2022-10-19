@@ -299,6 +299,7 @@ $shadow-color: #029450;
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: row;
     gap: 2vw 2vw;
     justify-content: center;
     flex-wrap: wrap;
@@ -319,13 +320,12 @@ $shadow-color: #029450;
     .card {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       row-gap: 10px;
       background-color: $light;
       border-radius: 8px;
-      height: 50vh;
-      max-width: 25vw;
-      padding: 20px;
+      height: fit-content;
+      width: 20vw;
+      padding: 1rem;
       transition: 0.3s;
       cursor: pointer;
 
@@ -344,18 +344,18 @@ $shadow-color: #029450;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        row-gap: 5px;
+        row-gap: 4px;
 
         .name {
           color: $main-color;
-          font-size: 140%;
+          font-size: clamp(1.4rem, 1.5vw, 2rem);
         }
         .address {
           color: $main-color;
-          font-size: 100%;
+          font-size: clamp(1rem, 1vw, 2rem);
         }
         .category {
-          font-size: 100%;
+          font-size: clamp(1rem, 1vw, 2rem);
           color: $secondary-color;
         }
       }
@@ -366,8 +366,8 @@ $shadow-color: #029450;
         color: $light;
         border-radius: 4px;
         width: 100%;
-        padding: 10px 0;
-        font-size: 130%;
+        padding: 12px 8px;
+        font-size: clamp(1rem, 1vw, 2rem);
         transition: 0.3s;
 
         &:hover {
