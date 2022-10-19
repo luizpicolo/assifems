@@ -3,8 +3,8 @@ const { Establishment } = require('../models');
 
 exports.list = async function(req, res) {
 
-  const retorna = await Establishment.findAll();
-  res.render('establishments', {retorna});
+  const establishments = await Establishment.findAll();
+  res.render('establishments', {establishments});
 };
 
 // exports.create = async function(req, res) {
