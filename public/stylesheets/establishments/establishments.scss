@@ -248,6 +248,10 @@ $shadow-color: #029450;
       h1 {
         font-weight: 300;
       }
+      #close_filter{
+
+        cursor: pointer;
+      }
     }
     .column {
       display: flex;
@@ -279,6 +283,7 @@ $shadow-color: #029450;
       &:hover {
         transform: scale(1.1);
         transition: 500ms;
+        cursor: pointer;
       }
     }
     .clear {
@@ -290,6 +295,7 @@ $shadow-color: #029450;
     transition: 500ms;
     &:hover {
       transform: scale(1.1);
+      cursor: pointer;
       transition: 500ms;
     }
   }

@@ -219,6 +219,9 @@
   #filter_options .row h1 {
     font-weight: 300;
   }
+  #filter_options .row #close_filter {
+    cursor: pointer;
+  }
   #filter_options .column {
     display: flex;
     padding: 25px;
@@ -250,6 +253,7 @@
   #filter_options .filter:hover {
     transform: scale(1.1);
     transition: 500ms;
+    cursor: pointer;
   }
   #filter_options .clear {
     background-color: #10140f;
@@ -261,6 +265,7 @@
   }
   #filter_options .clear:hover {
     transform: scale(1.1);
+    cursor: pointer;
     transition: 500ms;
   }
   .container {

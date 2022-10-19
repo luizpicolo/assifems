@@ -26,11 +26,7 @@
       <div class="options">
         <div id="return" onclick="menu()">
           <span>Nome de usuário</span
-          ><img
-            class="icon_arrow"
-            id="arrow"
-            src="images/icons/arrow.svg"
-          />
+          ><img class="icon_arrow" id="arrow" src="images/icons/arrow.svg" />
         </div>
         <img id="hamburger" src="images/icons/hamburger.svg" onclick="menu()" />
         <div><h1 class="title_carteirinha">Estabelecimentos</h1></div>
@@ -41,7 +37,9 @@
               <img id="close" src="images/icons/close.svg" onclick="menu()" />
               <div>Logado em <b>Nome de usuario</b></div>
               <div><a href="/">Vizualizar carteirinha</a></div>
-              <div class="selected"><a href="/estabelecimentos">Estabelecimentos</a></div>
+              <div class="selected">
+                <a href="/estabelecimentos">Estabelecimentos</a>
+              </div>
               <div>Sair</div>
             </div>
 
@@ -72,44 +70,59 @@
     </div>
 
     <div id="filter_options">
-      <div class="row"><h1>Filtrar</h1><img id="close_filter" src="images/icons/close.svg" onclick="filtrar()" /></div>
+      <div class="row">
+        <h1>Filtrar</h1>
+        <img
+          id="close_filter"
+          src="images/icons/close.svg"
+          onclick="filtrar()"
+        />
+      </div>
 
       <div class="column">
         <h1>Categorias</h1>
-      <div><input type="checkbox" id="farmacia" name="farmacia">
-      <label for="farmacia">Farmácia</label></div>
 
-      <div><input type="checkbox" id="supermercados" name="supermercados">
-      <label for="supermercados">Supermercados</label></div>
-
-      <div><input type="checkbox" id="dentista" name="dentista">
-      <label for="dentista">Dentista</label></div>
-
-      <div><input type="checkbox" id="vestuario" name="vestuario">
-      <label for="vestuario">Vestuário</label></div>
-
-     <div class="button"> <button class="filter">FILTRAR</button>
-      <button class="clear">LIMPAR</button></div> 
-
-    </div>
-    </div>
-
-
-    <div class="container">
-
-      <% establishments.forEach(function(establishment){ %>
-      <div class="card"> 
-       <div class="photo"></div>
-       <div class="info"> 
-          <h1 class="name"><%= establishment.name %></h1> 
-          <h3 class="category">Ramo de Atividade</h3> 
-          <h3 class="address"><%= establishment.address %></h3> 
-          <button>Entrar em Contato</button></div> 
+        <form action="/establishment" method="post">
+          <div>
+            <input type="checkbox" id="farmacia" name="farmacia" />
+            <label for="farmacia">Farmácia</label>
           </div>
 
-      <% }); %>
+          <div>
+            <input type="checkbox" id="supermercados" name="supermercados" />
+            <label for="supermercados">Supermercados</label>
+          </div>
 
-     
+          <div>
+            <input type="checkbox" id="dentista" name="dentista" />
+            <label for="dentista">Dentista</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="vestuario" name="vestuario" />
+            <label for="vestuario">Vestuário</label>
+          </div>
+        </form>
+        <div class="button">
+          <button class="filter">FILTRAR</button>
+          <button class="clear">LIMPAR</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <% establishments.forEach(function(establishment){ %>
+      <div class="card">
+        <div class="photo"></div>
+        <div class="info">
+          <h1 class="name"><%= establishment.name %></h1>
+          <h3 class="category">Ramo de Atividade</h3>
+          <h3 class="address"><%= establishment.address %></h3>
+          <button>Entrar em Contato</button>
+        </div>
+      </div>
+
+      <% }); %>
     </div>
 
     <!-- Footer -->
