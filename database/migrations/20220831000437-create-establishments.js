@@ -25,7 +25,6 @@ module.exports = {
       },
       categoryId: {
         allowNull: false,
-        unique: true,
         type: DataTypes.INTEGER,
         references: {
           model: "categories",

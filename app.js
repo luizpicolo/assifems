@@ -12,7 +12,7 @@ const categoriesRouter = require('./routes/categories');
 const app = express();
 
 // AdminJS
-// app.use("/admin", require("./admin"))
+app.use("/admin", require("./admin"))
 
 // view engine setup
 app.set('views', path.join(__dirname, 'app/views'));
