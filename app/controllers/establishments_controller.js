@@ -10,8 +10,10 @@ exports.list = async function(req, res) {
 };
 
 exports.filter = async function(req, res) {
+
+
   const establishments = await Establishment.findAll(
-   { where: {categoryId: req.body.category}}
+   { where: {categoryId: Object.values(req.body.category)}}
   );
   const categories = await Category.findAll();
   res.render('establishments', {establishments, categories});
