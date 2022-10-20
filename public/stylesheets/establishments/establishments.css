@@ -6,7 +6,9 @@
     background-color: #fffaf0;
     border: none;
     border-radius: 5px;
-    width: 100%;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
     height: 8vw;
     font-size: 15px;
     color: black;
@@ -157,7 +159,9 @@
     background-color: #d12a2f;
   }
   .container .card .photo {
-    background-color: #10140f;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     border-radius: 8px;
     width: 128px;
     aspect-ratio: 1/1;
@@ -308,7 +312,8 @@
     transition: 0.3s;
   }
   .container .card .photo {
-    background-color: #10140f;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 8px;
     width: 100%;
     aspect-ratio: 1/1;

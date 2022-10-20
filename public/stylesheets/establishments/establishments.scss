@@ -181,7 +181,9 @@ $shadow-color: #029450;
       }
 
       .photo {
-        background-color: $dark;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
         border-radius: 8px;
         width: 128px;
         aspect-ratio: 1/1;
@@ -342,7 +344,8 @@ $shadow-color: #029450;
       }
 
       .photo {
-        background-color: $dark;
+   background-repeat: no-repeat;
+   background-size: cover;
         border-radius: 8px;
         width: 100%;
         aspect-ratio: 1/1;
