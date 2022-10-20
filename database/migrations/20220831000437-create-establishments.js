@@ -23,6 +23,18 @@ module.exports = {
         allowNull: false,
         type: DataTypes.STRING,
       },
+      addressURL: {
+        allowNull: false,
+        type: DataTypes.STRING,
+      },
+      imgURL:{
+        allowNull: false,
+        type: DataTypes.STRING,
+      },
+      cell: {
+        allowNull: false,
+        type: DataTypes.STRING,
+      },
       categoryId: {
         allowNull: false,
         type: DataTypes.INTEGER,

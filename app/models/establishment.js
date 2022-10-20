@@ -12,6 +12,15 @@ module.exports = (sequelize, DataTypes) => {
     address: {
       type: DataTypes.STRING,
     },
+    addressURL: {
+      type: DataTypes.STRING,
+    },
+    imgURL: {
+      type: DataTypes.STRING,
+    },
+    cell: {
+      type: DataTypes.STRING,
+    },
     categoryId: {
       type: DataTypes.INTEGER,
       allowNull: false,

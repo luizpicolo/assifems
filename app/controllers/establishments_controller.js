@@ -4,7 +4,9 @@ const { Category } = require('../models');
 
 exports.list = async function(req, res) {
 
-  const establishments = await Establishment.findAll();
+  const establishments = await Establishment.findAll({
+    include: 'category'
+  });
   const categories = await Category.findAll();
   res.render('establishments', {establishments, categories});
 };

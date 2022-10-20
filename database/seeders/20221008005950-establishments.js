@@ -3,14 +3,14 @@
 module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.bulkInsert('establishments', [
-      {name: 'florai',
+      {name: 'Florai',
     cnpj: '741202974',
-    address: 'rua da saudade',
+    address: 'Rua da Saudade',
     categoryId: 1
     },
-    {name: 'W3',
+    {name: 'Agência W3',
     cnpj: '741202',
-    address: 'rua da saudade',
+    address: 'Rua da Saudade',
     categoryId: 2
     }
      
