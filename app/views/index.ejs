@@ -78,7 +78,7 @@
         <div class="left">
           <div class="photo"></div>
 
-          <span>Status:<span class="status">Inválida</span></span>
+          <span>Status:<span class="status"><%= associate.validity %></span></span>
         </div>
 
         <!-- Left End -->
@@ -91,7 +91,7 @@
           <div class="lines">
             <div class="data">
               <span class="red">Nome e Sobrenome:</span>
-              <span class="name">André Luís de Souza Lopes</span>
+              <span class="name"><%= associate.name %></span>
             </div>
           </div>
 
@@ -102,7 +102,7 @@
             <!--Birth Date -->
             <div class="data">
               <span class="red">Data de Nascimento</span>
-              <span>99/99/9999</span>
+              <span><%= associate.birth_date %></span>
             </div>
 
             <!--Birth Date End -->
@@ -110,7 +110,7 @@
             <!--CPF -->
             <div class="data">
               <span class="red">CPF</span>
-              <span>999.999.999-99</span>
+              <span><%= associate.cpf %></span>
             </div>
 
             <!--CPF End -->
@@ -118,7 +118,7 @@
             <!--RG -->
             <div class="data">
               <span class="red">RG</span>
-              <span>999.999.999-99</span>
+              <span><%= associate.rg %></span>
             </div>
             <!--RG End -->
           </div>
