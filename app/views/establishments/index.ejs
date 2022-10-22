@@ -112,8 +112,8 @@
         <div class="info">
           <h1 class="name"><%= establishment.name %></h1>
           <h3 class="category"><%= establishment.category.name %></h3>
-          <h3 class="address"><%= establishment.address %></h3>
-          <button>Entrar em Contato</button>
+          <h3 class="address"><a href=<%= establishment.addressURL %>><%= establishment.address %></a></h3>
+          <a href="https://api.whatsapp.com/send?phone=55<%= establishment.cell %>"><button>Entrar em Contato</button></a>
         </div>
       </div>
       <% }); %>

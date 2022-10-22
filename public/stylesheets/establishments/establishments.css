@@ -336,7 +336,7 @@
     font-size: clamp(1rem, 1vw, 2rem);
     color: #ec3237;
   }
-  .container .card button {
+  .container .card a button {
     border: 0;
     background-color: #ec3237;
     color: #fffaf0;
@@ -346,8 +346,8 @@
     font-size: clamp(1rem, 1vw, 2rem);
     transition: 0.3s;
   }
-  .container .card button:hover {
-    background-color: #d12a2f;
+  .container .card a button:hover {
+    background-color: #b32428;
     cursor: pointer;
     transition: 0.3s;
   }

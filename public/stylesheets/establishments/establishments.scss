@@ -341,6 +341,7 @@ $shadow-color: #029450;
       &:hover {
         box-shadow: 11px 10px 13px #029450;
         transition: 0.3s;
+
       }
 
       .photo {
@@ -369,7 +370,7 @@ $shadow-color: #029450;
           color: $secondary-color;
         }
       }
-
+a{
       button {
         border: 0;
         background-color: $secondary-color;
@@ -381,11 +382,12 @@ $shadow-color: #029450;
         transition: 0.3s;
 
         &:hover {
-          background-color: #d12a2f;
+          background-color: #b32428;
           cursor: pointer;
           transition: 0.3s;
         }
       }
+    }
     }
   }
 }
