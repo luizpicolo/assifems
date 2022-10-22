@@ -30,13 +30,9 @@
       </div>
 
       <div class="options">
-        <div id="return"  onclick="menu()">
+        <div id="return" onclick="menu()">
           <span>Nome de usuário</span
-          ><img
-            class="icon_arrow"
-            id="arrow"
-            src="images/icons/arrow.svg"
-          />
+          ><img class="icon_arrow" id="arrow" src="images/icons/arrow.svg" />
         </div>
         <img id="hamburger" src="images/icons/hamburger.svg" onclick="menu()" />
         <div><h1 class="title_carteirinha">Carteirinha Digital</h1></div>
@@ -48,7 +44,11 @@
               <div>Logado em <b>Nome de usuario</b></div>
               <div class="selected">Vizualizar carteirinha</div>
               <div><a href="/estabelecimentos">Estabelecimentos</a></div>
-              <div>Sair</div>
+              <div>
+                <form action="/deslogar" method="post">
+                  <input class="deslogar" type="submit" value="Sair" />
+                </form>
+              </div>
             </div>
 
             <div class="down">
@@ -78,7 +78,9 @@
         <div class="left">
           <div class="photo"></div>
 
-          <span>Status:<span class="status"><%= associate.status %></span></span>
+          <span
+            >Status:<span class="status"><%= associate.status %></span></span
+          >
         </div>
 
         <!-- Left End -->
@@ -102,7 +104,9 @@
             <!--Birth Date -->
             <div class="data">
               <span class="red">Data de Nascimento</span>
-              <span><%= associate.birth_date.toLocaleDateString('pt-BR') %></span>
+              <span
+                ><%= associate.birth_date.toLocaleDateString('pt-BR') %></span
+              >
             </div>
 
             <!--Birth Date End -->
@@ -156,34 +160,38 @@
 
       <!-- Name and Status -->
       <div>
-        <h1 class="red">Nome e Sobrenome</h1>
+        <h1 class="red"><%= associate.name %></h1>
         <span
           ><span class="green">Status: </span
-          ><span class="status">Inválida</span></span
+          ><span class="status"><%= associate.status %></span></span
         >
       </div>
       <!-- Name and Status End -->
 
-       <!-- Birthdate and Validity -->
+      <!-- Birthdate and Validity -->
       <div>
         <p>Data de nascimento</p>
-        <span class="green">99/99/9999</span>
+        <span class="green"
+          ><%= associate.birth_date.toLocaleDateString('pt-BR') %></span
+        >
         <p>Validade da Carteirinha</p>
-        <span class="green">99/99/9999</span>
+        <span class="green"
+          ><%= associate.validity.toLocaleDateString('pt-BR') %></span
+        >
       </div>
-       <!-- Birthdate and Validity End -->
+      <!-- Birthdate and Validity End -->
 
-       <!-- DOCS -->
+      <!-- DOCS -->
       <div class="green-box">
         <p class="green">CPF</p>
-        <span>999.999.999-99</span>
+        <span><%= associate.cpf %></span>
         <p class="green">RG</p>
-        <span>99.999.999-9</span>
+        <span><%= associate.rg %></span>
         <p class="green">SIAPE</p>
-        <span>99.999.999-9</span>
+        <span><%= associate.siape %></span>
       </div>
       <img class="assifems" src="/images/assifems.png" />
-       <!-- DOCS End -->
+      <!-- DOCS End -->
     </container-mobile>
 
     <!-- Footer -->

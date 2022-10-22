@@ -141,7 +141,12 @@ $shadow-color: #029450;
       .deslogar{
         border: none;
         color: black;
+        background-color: none;
+        background-color: white;
+        transition: 200ms;
+        font-weight: 700;
       }
+
       .division {
         display: flex;
         flex-direction: column;
@@ -163,6 +168,12 @@ $shadow-color: #029450;
         transition: 200ms;
 
         &:hover {
+          background-color: $dark;
+          color: $light;
+          transition: 200ms;
+          cursor: pointer;
+        }
+        &:hover .deslogar{
           background-color: $dark;
           color: $light;
           transition: 200ms;

@@ -40,9 +40,11 @@
               <div class="selected">
                 <a href="/estabelecimentos">Estabelecimentos</a>
               </div>
+              <div>
               <form action="/deslogar" method="post">
                 <input class="deslogar" type="submit" value="Sair">
               </form>
+            </div>
             </div>
 
             <div class="down">
@@ -110,7 +112,8 @@
     <div class="container" id="container">
       <% establishments.forEach(function(establishment){ %>
       <div class="card">
-        <div class="photo" style="background-image: url(<%= establishment.imgURL.toString() %>)"></div>
+        <div class="photo" style="background-image: url(<%= establishment.imgURL.toString() %>)">
+        </div>
         <div class="info">
           <h1 class="name"><%= establishment.name %></h1>
           <h3 class="category"><%= establishment.category.name %></h3>

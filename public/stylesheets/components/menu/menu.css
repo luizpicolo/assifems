@@ -122,6 +122,10 @@
   header #more_options .deslogar {
     border: none;
     color: black;
+    background-color: none;
+    background-color: white;
+    transition: 200ms;
+    font-weight: 700;
   }
   header #more_options .division {
     display: flex;
@@ -144,6 +148,12 @@
     font-size: 0.9rem;
   }
   header #more_options .up div:hover {
+    background-color: #10140f;
+    color: #fffaf0;
+    transition: 200ms;
+    cursor: pointer;
+  }
+  header #more_options .up div:hover .deslogar {
     background-color: #10140f;
     color: #fffaf0;
     transition: 200ms;
