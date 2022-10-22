@@ -25,3 +25,13 @@ function menu() {
     `;
   }
 }
+
+function filtrar(){
+if (visibility) {
+  filter_options.style.display = "block";
+    visibility = false;
+  } else {
+    filter_options.style.display = "none";
+    visibility = true;
+  }
+}

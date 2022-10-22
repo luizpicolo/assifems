@@ -14,7 +14,7 @@ const resources = [
   },
   { resource: Establishment, 
     options: { 
-      listProperties: ['id', 'name', 'cnpj', 'address', 'createdAt', 'updatedAt']
+      listProperties: ['id', 'name', 'cnpj', 'address', 'addressURL', 'cell', 'imgURL', 'createdAt', 'updatedAt']
     }
   },
   { resource: Associate, 
@@ -36,7 +36,7 @@ const options = {
   branding: {
     companyName: 'ASSIFEMS - IFMS',
     softwareBrothers: false,
-    logo: '/images/logo.png',
+    logo: '/images/assifems.png',
   },
 }
 

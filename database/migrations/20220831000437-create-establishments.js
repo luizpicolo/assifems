@@ -19,14 +19,24 @@ module.exports = {
         unique: true,
         type: DataTypes.STRING,
       },
-      adress: {
+      address: {
         allowNull: false,
-        unique: true,
+        type: DataTypes.STRING,
+      },
+      addressURL: {
+        allowNull: false,
+        type: DataTypes.STRING,
+      },
+      imgURL:{
+        allowNull: false,
+        type: DataTypes.STRING,
+      },
+      cell: {
+        allowNull: false,
         type: DataTypes.STRING,
       },
       categoryId: {
         allowNull: false,
-        unique: true,
         type: DataTypes.INTEGER,
         references: {
           model: "categories",

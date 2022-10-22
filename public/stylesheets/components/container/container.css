@@ -140,7 +140,8 @@
   container-mobile .red {
     font-size: 7vw;
   }
-  container-mobile p, container-mobile span {
+  container-mobile p,
+container-mobile span {
     font-size: 5vw;
   }
   .green-box {

@@ -9,13 +9,30 @@ module.exports = (sequelize, DataTypes) => {
     cnpj: {
       type: DataTypes.STRING,
     },
-    adress: {
+    address: {
       type: DataTypes.STRING,
+    },
+    addressURL: {
+      type: DataTypes.STRING,
+    },
+    imgURL: {
+      type: DataTypes.STRING,
+    },
+    cell: {
+      type: DataTypes.STRING,
+    },
+    categoryId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: "categories",
+        key: "id",
+      },
     },
   });
 
   Establishment.associate = function (models) {
-    Establishment.belongsTo(models.Establishment, { as: "establishments" });
+    Establishment.belongsTo(models.Category, { as: "category" });
   };
 
   Establishment.model_name = function () {
