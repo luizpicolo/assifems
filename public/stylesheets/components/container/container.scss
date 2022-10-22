@@ -56,8 +56,9 @@ $shadow-color: #029450;
     .photo {
       width: 150px;
       aspect-ratio: 3/4;
-      background-color: #10140f;
       border-radius: 8px;
+      background-size: cover;
+      background-position: center;
     }
 
     .page {
@@ -143,7 +144,6 @@ $shadow-color: #029450;
     .photo {
       width: 25vw;
       aspect-ratio: 3/4;
-      background-color: #10140f;
       border-radius: 8px;
     }
 

@@ -1,0 +1,84 @@
+$main-color: #00a85a;
+$secondary-color: #ec3237;
+$light: #fffaf0;
+$dark: #10140f;
+$shadow-color: #029450;
+
+@mixin flex($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@media screen and (max-width: 600px) {
+  .login_input {
+    background-color: $light;
+    border: none;
+    border-radius: 5px;
+    width: clamp(256px, 10vw, 1024px);
+    height: 32px;
+    font-size: 15px;
+    color: black;
+    padding: 8px 0 8px 0px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+
+  container {
+    width: 100%;
+    height: 100%;
+    background-color: $light;
+    border-radius: 8px;
+    box-shadow: 11px 10px 13px $shadow-color;
+
+    .title {
+      width: 100%;
+      height: 20%;
+      padding: 0 48px 0 48px;
+      background-color: $dark;
+      border-radius: 8px 8px 0 0;
+      line-height: 38px;
+      font-size: 40px;
+      font-weight: bold;
+      color: $light;
+      letter-spacing: 2px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      img {
+        width: 40px;
+      }
+      a {
+        line-height: 0;
+      }
+    }
+
+    .login_page {
+      display: flex;
+  
+      div {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+      }
+    }
+  
+    .login_input {
+      background-color: $light;
+      border: solid 1px $main-color;
+      border-radius: 5px;
+      width: clamp(256px, 10vw, 1024px);
+      height: 32px;
+      font-size: 15px;
+      color: $main-color;
+      padding: 8px 8px 8px 8px;
+    }
+  }
+}

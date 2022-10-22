@@ -19,7 +19,7 @@ const resources = [
   },
   { resource: Associate, 
     options: { 
-      listProperties: ['id', 'name', 'birth_date', 'role', 'cpf', 'rg', 'status', 'validity', 'siape']
+      listProperties: ['id', 'name', 'birth_date', 'role', 'cpf', 'rg', 'status', 'validity', 'siape', 'photoURL']
     }
   }
 ];

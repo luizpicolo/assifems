@@ -27,6 +27,9 @@ module.exports = (sequelize, DataTypes) => {
     siape: {
       type: DataTypes.STRING,
     },
+    photoURL: {
+      type: DataTypes.STRING,
+    },
   });
 
   Associate.model_name = function () {

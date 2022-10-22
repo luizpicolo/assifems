@@ -49,6 +49,12 @@ $shadow-color: #029450;
       color: $light;
       font-size: 5vw;
     }
+    .deslogar{
+      border: none;
+      color: $light;
+      background-color: $dark;
+
+    }
     .division {
       display: flex;
       flex-direction: column;
@@ -107,6 +113,7 @@ $shadow-color: #029450;
 
       .icon_arrow {
         height: 22px;
+        cursor: pointer;
       }
     }
 
@@ -116,7 +123,6 @@ $shadow-color: #029450;
     }
     .options {
       position: relative;
-      cursor: pointer;
     }
     .title_carteirinha {
       display: none;
@@ -132,7 +138,7 @@ $shadow-color: #029450;
       background-color: $light;
       right: 0;
       border: solid 2px;
-      width: 120%;
+      width: 180px;
       border-radius: 10px 0 10px 10px;
       z-index: 1;
       flex-direction: column;
@@ -154,7 +160,7 @@ $shadow-color: #029450;
         height: 100%;
       }
       .down {
-        margin-top: 150px;
+        margin-top: 170px;
       }
       // Change the color of the selected item
       .selected {
@@ -172,12 +178,14 @@ $shadow-color: #029450;
           color: $light;
           transition: 200ms;
           cursor: pointer;
+          
         }
         &:hover .deslogar{
           background-color: $dark;
           color: $light;
           transition: 200ms;
           cursor: pointer;
+        
         }
 
         &:first-child {
@@ -196,6 +204,7 @@ $shadow-color: #029450;
           transition: 200ms;
           font-weight: 800;
           cursor: pointer;
+     
         }
       }
       .icon_help {
@@ -203,7 +212,7 @@ $shadow-color: #029450;
         &:hover {
           transition: 200ms;
           height: 12px;
-          cursor: pointer;
+
         }
       }
     }

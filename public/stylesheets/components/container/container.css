@@ -53,8 +53,9 @@
   container-desktop .photo {
     width: 150px;
     aspect-ratio: 3/4;
-    background-color: #10140f;
     border-radius: 8px;
+    background-size: cover;
+    background-position: center;
   }
   container-desktop .page {
     width: 100%;
@@ -134,7 +135,6 @@
   container-mobile .photo {
     width: 25vw;
     aspect-ratio: 3/4;
-    background-color: #10140f;
     border-radius: 8px;
   }
   container-mobile .red {

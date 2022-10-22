@@ -31,7 +31,7 @@
 
       <div class="options">
         <div id="return" onclick="menu()">
-          <span>Nome de usuário</span
+          <span style="cursor: pointer;"><%= associate.name %></span
           ><img class="icon_arrow" id="arrow" src="images/icons/arrow.svg" />
         </div>
         <img id="hamburger" src="images/icons/hamburger.svg" onclick="menu()" />
@@ -41,7 +41,7 @@
           <div class="division">
             <div class="up">
               <img id="close" src="images/icons/close.svg" onclick="menu()" />
-              <div>Logado em <b>Nome de usuario</b></div>
+              <div><a href="/" >Logado em <b><span style="color:#029450; font-size:15px;"><%= associate.name %></span></b></a></div>
               <div class="selected">Vizualizar carteirinha</div>
               <div><a href="/estabelecimentos">Estabelecimentos</a></div>
               <div>
@@ -53,8 +53,9 @@
 
             <div class="down">
               <div>
-                <img class="icon_help" src="images/icons/help_white.svg" />
-                Preciso de ajuda
+                <a href="https://wa.me/556781321492"
+          ><img class="icon_help" src="images/icons/help_white.svg" />
+                Preciso de ajuda</a>
               </div>
             </div>
           </div>
@@ -76,7 +77,7 @@
       <div class="page">
         <!-- Left Side -->
         <div class="left">
-          <div class="photo"></div>
+          <div class="photo" style="background-image: url(<%= associate.photoURL %>)"></div>
 
           <span
             >Status:<span class="status"><%= associate.status %></span></span
@@ -155,7 +156,7 @@
 
     <container-mobile>
       <!-- Profile Photo -->
-      <div class="photo"></div>
+      <div class="photo" style="background-image: url(<%= associate.photoURL %>)"></div>
       <!-- Profile Photo End -->
 
       <!-- Name and Status -->

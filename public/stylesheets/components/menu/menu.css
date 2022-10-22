@@ -35,6 +35,11 @@
     color: #fffaf0;
     font-size: 5vw;
   }
+  header .deslogar {
+    border: none;
+    color: #fffaf0;
+    background-color: #10140f;
+  }
   header .division {
     display: flex;
     flex-direction: column;
@@ -92,6 +97,7 @@
   }
   header #return .icon_arrow {
     height: 22px;
+    cursor: pointer;
   }
   header .assifems {
     height: 40px;
@@ -99,7 +105,6 @@
   }
   header .options {
     position: relative;
-    cursor: pointer;
   }
   header .title_carteirinha {
     display: none;
@@ -113,7 +118,7 @@
     background-color: #fffaf0;
     right: 0;
     border: solid 2px;
-    width: 120%;
+    width: 180px;
     border-radius: 10px 0 10px 10px;
     z-index: 1;
     flex-direction: column;
@@ -134,7 +139,7 @@
     height: 100%;
   }
   header #more_options .down {
-    margin-top: 150px;
+    margin-top: 170px;
   }
   header #more_options .selected {
     color: #ec3237 !important;
@@ -179,6 +184,5 @@
   header #more_options .icon_help:hover {
     transition: 200ms;
     height: 12px;
-    cursor: pointer;
   }
 }/*# sourceMappingURL=menu.css.map */

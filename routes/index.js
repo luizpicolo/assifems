@@ -9,7 +9,7 @@ router.get("/", function (req, res, next) {
   if (isLogged) {
     res.render("index", { associate });
   } else {
-    res.render("login");
+    res.render("login", {error: false});
   }
 });
 
@@ -23,13 +23,13 @@ router.post("/", async function (req, res, next) {
     associate = findAssociate;
     res.render("index", { associate });
   } else {
-    res.render("login");
+    res.render("login", { error: true });
   }
 });
 
 router.post("/deslogar", async function (req, res, next) {
   isLogged = false;
-  res.json("deslogado");
+  res.render("login", {error: false});
 });
 
 module.exports = router;
