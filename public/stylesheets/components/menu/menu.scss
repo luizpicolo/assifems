@@ -138,6 +138,10 @@ $shadow-color: #029450;
       flex-direction: column;
       font-weight: 700;
 
+      .deslogar{
+        border: none;
+        color: black;
+      }
       .division {
         display: flex;
         flex-direction: column;

@@ -78,7 +78,7 @@
         <div class="left">
           <div class="photo"></div>
 
-          <span>Status:<span class="status"><%= associate.validity %></span></span>
+          <span>Status:<span class="status"><%= associate.status %></span></span>
         </div>
 
         <!-- Left End -->
@@ -102,7 +102,7 @@
             <!--Birth Date -->
             <div class="data">
               <span class="red">Data de Nascimento</span>
-              <span><%= associate.birth_date %></span>
+              <span><%= associate.birth_date.toLocaleDateString('pt-BR') %></span>
             </div>
 
             <!--Birth Date End -->
@@ -129,14 +129,14 @@
             <!--SIAPE -->
             <div class="data">
               <span class="red">SIAPE</span>
-              <span>999.999.999-99</span>
+              <span><%= associate.siape %></span>
             </div>
             <!--SIAPE End -->
 
             <!--Validity -->
             <div class="data">
               <span class="red">Validade da Carteirinha</span>
-              <span>99/99/9999</span>
+              <span><%= associate.validity.toLocaleDateString('pt-BR') %></span>
             </div>
             <!--Validity End -->
           </div>

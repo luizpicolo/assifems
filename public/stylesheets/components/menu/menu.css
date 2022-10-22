@@ -119,6 +119,10 @@
     flex-direction: column;
     font-weight: 700;
   }
+  header #more_options .deslogar {
+    border: none;
+    color: black;
+  }
   header #more_options .division {
     display: flex;
     flex-direction: column;
