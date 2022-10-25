@@ -14,6 +14,16 @@ module.exports = {
         unique: true,
         type: DataTypes.STRING,
       },
+      createdAt: {
+        allowNull: false,
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.fn("NOW"),
+      },
+      updatedAt: {
+        allowNull: false,
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.fn("NOW"),
+      },
     });
   },
   async down(queryInterface, Sequelize) {

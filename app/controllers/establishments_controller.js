@@ -1,14 +1,22 @@
-const { Establishment } = require('../models');
+const { Establishment } = require("../models");
+const { Category } = require("../models");
 
-exports.list = async function(req, res) {
-  // const establishments = await Establishment.findAll();
-  // res.json(establishments);
-  res.send("Aqui deve ser implementado")
+exports.list = async function (req, res) {
+  const establishments = await Establishment.findAll({
+    include: "category",
+  });
+  const categories = await Category.findAll();
+  res.render("establishments", { establishments, categories });
 };
 
-// exports.create = async function(req, res) {
-//   res.send("Aqui deve ser implementado")
-// };
+exports.filter = async function (req, res) {
+  const establishments = await Establishment.findAll({
+    where: { categoryId: Object.values(req.body.category) },
+    include: "category",
+  });
+  const categories = await Category.findAll();
+  res.render("establishments", { establishments, categories });
+};
 
 // exports.find = async function(req, res) {
 //   res.send("Aqui deve ser implementado" + req.params.id)
