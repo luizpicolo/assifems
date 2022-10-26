@@ -31,14 +31,15 @@
       <!-- Main Content -->
       <div class="login_page">
         <div>
-        <h1>Insira seus dados para realizar login</h1>
+        <h1>Insira seus dados para realizar login.</h1>
         <form action="/" method="post">
+          <label for="cpf">CPF
           <input
             type="text"
             name="cpf"
-            placeholder="insira seu cpf"
+            placeholder="999.999.999-99"
             class="login_input"
-          />
+          /></label>
           <% if(error){%>
        <span class="red"><b>*O CPF está incorreto. Verifique se há algum erro de digitação.</b></span>
             <%  } %>
