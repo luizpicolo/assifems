@@ -4,6 +4,7 @@ $light: #fffaf0;
 $dark: #10140f;
 $shadow-color: #029450;
 
+
 @mixin flex($direction, $align, $justify) {
   display: flex;
   flex-direction: $direction;
@@ -23,6 +24,9 @@ $shadow-color: #029450;
     width: 100%;
     .assifems {
       display: none;
+    }
+    .associate_name{
+      color: #029450;
     }
 
     #return {
@@ -120,6 +124,9 @@ $shadow-color: #029450;
     .assifems {
       height: 40px;
       max-width: 100%;
+    }
+    .associate_name{
+      color: #029450; 
     }
     .options {
       position: relative;

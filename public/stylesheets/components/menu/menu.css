@@ -11,6 +11,9 @@
   header .assifems {
     display: none;
   }
+  header .associate_name {
+    color: #029450;
+  }
   header #return {
     display: none;
   }
@@ -102,6 +105,9 @@
   header .assifems {
     height: 40px;
     max-width: 100%;
+  }
+  header .associate_name {
+    color: #029450;
   }
   header .options {
     position: relative;

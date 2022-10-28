@@ -12,3 +12,51 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 />
 <title><%= title %></title>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div>
+      <img class="assifems" src="/images/assifems.png" />
+    </div>
+
+    <div class="options">
+      <div id="return" onclick="menu()">
+        <span style="cursor: pointer"></span
+        ><img class="icon_arrow" id="arrow" src="images/icons/arrow.svg" />
+      </div>
+      <img id="hamburger" src="images/icons/hamburger.svg" onclick="menu()" />
+      <div><h1 class="title_carteirinha">Carteirinha Digital</h1></div>
+
+      <div id="more_options">
+        <div class="division">
+          <div class="up">
+            <img id="close" src="images/icons/close.svg" onclick="menu()" />
+            <div>
+              <a href="/">Logado em
+                <b>
+                  <span class="associate_name">Andre</span>
+                </b>
+              </a>
+            </div>
+            <div class="selected">Vizualizar carteirinha</div>
+            <div><a href="/estabelecimentos">Estabelecimentos</a></div>
+            <div>
+              <form action="/deslogar" method="post">
+                <input class="deslogar" type="submit" value="Sair" />
+              </form>
+            </div>
+          </div>
+
+          <div class="down">
+            <div>
+              <a href="https://wa.me/556781321492">
+                <img class="icon_help" src="images/icons/help_white.svg" />
+                Preciso de ajuda</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</body>

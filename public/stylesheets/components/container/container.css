@@ -115,10 +115,12 @@
   }
   container-mobile {
     width: 100%;
-    height: 80vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     background-color: #fffaf0;
     row-gap: 2vw;
-    padding: 8vw 0;
+    padding: 8vw 1vw;
     border-radius: 8px;
     box-shadow: 11px 10px 13px #029450;
     display: flex;
@@ -134,15 +136,23 @@
   }
   container-mobile .photo {
     width: 25vw;
-    aspect-ratio: 3/4;
+    height: 33vw;
     border-radius: 8px;
+    background-size: cover;
+    background-position: center;
   }
-  container-mobile .red {
-    font-size: 7vw;
+  container-mobile .nameSurname {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+  }
+  container-mobile .nameSurname .red {
+    font-size: clamp(2rem, 5vw, 4rem);
   }
   container-mobile p,
 container-mobile span {
-    font-size: 5vw;
+    font-size: clamp(1.6rem, 2.5vw, 3rem);
   }
   .green-box {
     border: solid 1px #00a85a;

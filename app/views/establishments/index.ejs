@@ -1,50 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%- include('../partials/head', {title : 'Estabelecimento}) %>
+    <%- include('../partials/head', {title : 'Estabelecimento'}) %>
   </head>
   <body>
-    <!-- Header -->
-    <header>
-      <div>
-        <a href="/"><img class="assifems" src="/images/assifems.png" /></a>
-      </div>
-
-      <div class="options">
-        <div id="return" onclick="menu()">
-          <span style="cursor: pointer;">Nome de usuário</span
-          ><img class="icon_arrow" id="arrow" src="images/icons/arrow.svg" />
-        </div>
-        <img id="hamburger" src="images/icons/hamburger.svg" onclick="menu()" />
-        <div><h1 class="title_carteirinha">Estabelecimentos</h1></div>
-
-        <div id="more_options">
-          <div class="division">
-            <div class="up">
-              <img id="close" src="images/icons/close.svg" onclick="menu()" />
-              <div>Logado em <b>Nome de usuario</b></div>
-              <div><a href="/">Vizualizar carteirinha</a></div>
-              <div class="selected">
-                <a href="/estabelecimentos">Estabelecimentos</a>
-              </div>
-              <div>
-              <form action="/deslogar" method="post">
-                <input class="deslogar" type="submit" value="Sair">
-              </form>
-            </div>
-            </div>
-
-            <div class="down">
-              <div>
-                <img class="icon_help" src="images/icons/help_white.svg" />
-                Preciso de ajuda
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!-- Header End-->
 
     <h1 class="title_estabelecimentos">ESTABELECIMENTOS</h1>
     <input
