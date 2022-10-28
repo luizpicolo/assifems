@@ -11,6 +11,9 @@
   header .assifems {
     display: none;
   }
+  header .view_name {
+    cursor: pointer;
+  }
   header .associate_name {
     color: #029450;
   }
@@ -105,6 +108,9 @@
   header .assifems {
     height: 40px;
     max-width: 100%;
+  }
+  header .view_name {
+    cursor: pointer;
   }
   header .associate_name {
     color: #029450;

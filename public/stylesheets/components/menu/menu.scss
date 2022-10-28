@@ -25,10 +25,12 @@ $shadow-color: #029450;
     .assifems {
       display: none;
     }
+    .view_name{
+      cursor: pointer;
+    }
     .associate_name{
       color: #029450;
     }
-
     #return {
       display: none;
     }
@@ -124,6 +126,9 @@ $shadow-color: #029450;
     .assifems {
       height: 40px;
       max-width: 100%;
+    }
+    .view_name{
+      cursor: pointer;
     }
     .associate_name{
       color: #029450; 
