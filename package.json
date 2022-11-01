@@ -38,7 +38,7 @@
     "request": "^2.88.2",
     "sass": "^1.55.0",
     "sequelize": "^6.23.1",
-    "tslib": "^2.4.0"
+    "tslib": "^2.4.1"
   },
   "devDependencies": {
     "localtunnel": "^2.0.2",
