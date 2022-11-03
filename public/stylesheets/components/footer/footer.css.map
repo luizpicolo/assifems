@@ -1,1 +1,10 @@
-{"version":3,"sources":["footer.scss","footer.css"],"names":[],"mappings":"AAEA;EAEA,kBAAA;EACA,cALQ;EAMR,uBAAA;EACA,iBAAA;ACFA","file":"footer.css"}
+{
+	"version": 3,
+	"file": "footer.css",
+	"sources": [
+		"footer.scss",
+		"../../_variables.scss"
+	],
+	"names": [],
+	"mappings": "AAEA,AAAA,MAAM,AAAA,CAEN,UAAU,CAAE,MAAM,CAClB,KAAK,CCHG,OAAO,CDIf,cAAc,CAAE,OAAO,CACvB,SAAS,CAAE,MAAM,CAEhB"
+}

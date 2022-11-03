@@ -1,8 +1,4 @@
-$main-color: #00a85a;
-$secondary-color: #ec3237;
-$light: #fffaf0;
-$dark: #10140f;
-$shadow-color: #029450;
+@import '../../variables';
 
 
 @mixin flex($direction, $align, $justify) {
