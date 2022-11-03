@@ -10,7 +10,7 @@
     "@adminjs/express": "^5.0.0",
     "@adminjs/sequelize": "^3.0.0",
     "@adminjs/upload": "^3.0.0",
-    "adminjs": "^6.2.4",
+    "adminjs": "^6.6.0",
     "animate.css": "^4.1.1",
     "axios": "^1.1.3",
     "bcryptjs": "^2.4.3",
