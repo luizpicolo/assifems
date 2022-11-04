@@ -1,3 +1,5 @@
+// JWT
+
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -9,6 +11,10 @@ const indexRouter = require('./routes/index');
 const establishmentsRouter = require('./routes/establishments');
 
 const app = express();
+
+require("dotenv/config");
+const jwt = require('jsonwebtoken');
+var { expressjwt: expressJWT } = require("express-jwt");
 
 // AdminJS
 app.use("/admin", require("./admin"))
@@ -31,6 +37,17 @@ app.use(sassMiddleware({
 }));
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(cookieParser());
+app.use(
+  expressJWT({
+    secret: process.env.SECRET,
+    algorithms: ["HS256"],
+    getToken: (req) => req.cookies.token,
+  }).unless({
+    path: ["/"],
+  })
+);
 
 app.use('/', indexRouter);
 app.use('/estabelecimentos', establishmentsRouter);
