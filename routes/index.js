@@ -1,29 +1,26 @@
 // JWT
-const createError = require('http-errors');
-const express = require('express');
-const path = require('path');
-const cookieParser = require('cookie-parser');
-const logger = require('morgan');
-const sassMiddleware = require('node-sass-middleware');
+const createError = require("http-errors");
+const express = require("express");
+const path = require("path");
+const cookieParser = require("cookie-parser");
 
 const router = express.Router();
 const { Associate } = require("../app/models");
 
 require("dotenv/config");
-const jwt = require('jsonwebtoken');
+const jwt = require("jsonwebtoken");
 var { expressjwt: expressJWT } = require("express-jwt");
 
 // GLOBAL VARS
 var isLogged = false;
 var associate = null;
 
-
 /* GET home page. */
 router.get("/", function (req, res, next) {
   if (isLogged) {
     res.render("index", { associate });
   } else {
-    res.render("login", {error: false});
+    res.render("login", { error: false });
   }
 });
 
@@ -35,7 +32,7 @@ router.post("/", async function (req, res, next) {
   if (findAssociate != null) {
     const id = 1;
     const token = jwt.sign({ id }, process.env.SECRET, {
-    expiresIn: 3600, // expires in 1 hour
+      expiresIn: 3600, // expires in 1 hour
     });
     res.cookie("token", token, { httpOnly: true });
     isLogged = true;
@@ -49,7 +46,7 @@ router.post("/", async function (req, res, next) {
 router.post("/deslogar", async function (req, res, next) {
   isLogged = false;
   res.cookie("token", null, { httpOnly: true });
-  res.render("login", {error: false});
+  res.render("login", { error: false });
 });
 
 module.exports = router;
