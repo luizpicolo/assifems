@@ -1,6 +1,12 @@
+
+
+
+
 const express = require("express");
 const router = express.Router();
 const { Associate } = require("../app/models");
+var cookieParser = require('cookie-parser')
+// GLOBAL VARS
 var isLogged = false;
 var associate = null;
 
