@@ -4,7 +4,7 @@ WORKDIR /app
 ADD package.json /app/package.json
 ADD yarn.lock /app/yarn.lock
 
-RUN apk add --no-cache git
+RUN apk add --no-cache g++ make py3-pip python3
 RUN yarn install
 
 ENV TZ=America/Campo_Grande

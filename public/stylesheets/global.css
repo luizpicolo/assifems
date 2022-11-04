@@ -11,18 +11,4 @@
   font-family: "Outfit", sans-serif;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-body {
-  background-color: #00a85a;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  height: 100vh;
-  row-gap: 16px;
-  padding: 1vw 2vw;
-}/*# sourceMappingURL=global.css.map */
+/*# sourceMappingURL=global.css.map */
