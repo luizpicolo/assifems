@@ -11,13 +11,20 @@
       </div>
 
       <div class="options">
+<<<<<<< HEAD
         <div id="return" onclick="menu()">
           <span style="cursor: pointer"><%= associate.name %></span
           ><img class="icon_arrow" id="arrow" src="images/icons/arrow.svg" />
+=======
+        <div id="return"  onclick="menu()">
+          <span>Nome de usuário</span>
+          <img class="icon_arrow" id="arrow" src="images/icons/arrow.svg" />
+>>>>>>> dfa275fbeb4602543ea2ef04ef3369aa66d8dd04
         </div>
         <img id="hamburger" src="images/icons/hamburger.svg" onclick="menu()" />
         <div><h1 class="title_carteirinha">Carteirinha Digital</h1></div>
 
+<<<<<<< HEAD
         <div id="more_options">
           <div class="division">
             <div class="up">
@@ -47,6 +54,9 @@
             </div>
           </div>
         </div>
+=======
+        <%- include('partials/menu', {user : user }) %>
+>>>>>>> dfa275fbeb4602543ea2ef04ef3369aa66d8dd04
       </div>
     </header>
 
@@ -54,9 +64,10 @@
     <container-desktop>
       <!-- Desktop Title -->
       <div class="title">
-        CARTEIRINHA DIGITAL<a href="https://wa.me/556781321492"
-          ><img src="images/icons/help.svg"
-        /></a>
+        CARTEIRINHA DIGITAL
+        <a href="https://wa.me/556781321492">
+          <img src="images/icons/help.svg" />
+        </a>
       </div>
       <!-- Title End -->
 
