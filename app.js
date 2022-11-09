@@ -1,9 +1,12 @@
+require('dotenv/config');
+
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const sassMiddleware = require('node-sass-middleware');
+const session = require('express-session')
 
 const indexRouter = require('./routes/index');
 const establishmentsRouter = require('./routes/establishments');
@@ -21,6 +24,21 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+// Session
+app.use(session({
+  secret: process.env.SECRET,
+  resave: false,
+  saveUninitialized: true
+}))
+
+app.use(function (req, res, next) {
+  if (!req.session.user) {
+    req.session.user = "Usuário"
+  }
+
+  next()
+})
 
 app.use(sassMiddleware({
   src: path.join(__dirname, 'public'),
