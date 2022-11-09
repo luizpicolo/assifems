@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%- include('../partials/head', {title : 'Estabelecimento}) %>
+    <%- include('../partials/head', {title : 'Estabelecimento'}) %>
   </head>
   <body>
     <!-- Header -->
@@ -18,26 +18,7 @@
         <img id="hamburger" src="images/icons/hamburger.svg" onclick="menu()" />
         <div><h1 class="title_carteirinha">Estabelecimentos</h1></div>
 
-        <div id="more_options">
-          <div class="division">
-            <div class="up">
-              <img id="close" src="images/icons/close.svg" onclick="menu()" />
-              <div>Logado em <b>Nome de usuario</b></div>
-              <div><a href="/">Vizualizar carteirinha</a></div>
-              <div class="selected">
-                <a href="/estabelecimentos">Estabelecimentos</a>
-              </div>
-              <div>Sair</div>
-            </div>
-
-            <div class="down">
-              <div>
-                <img class="icon_help" src="images/icons/help_white.svg" />
-                Preciso de ajuda
-              </div>
-            </div>
-          </div>
-        </div>
+        <%- include('../partials/menu', {user : user }) %>
       </div>
     </header>
     <!-- Header End-->
