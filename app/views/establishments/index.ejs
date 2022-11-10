@@ -12,40 +12,15 @@
 
       <div class="options">
         <div id="return" onclick="menu()">
-          <span style="cursor: pointer;">Nome de usuário</span
+          <span style="cursor: pointer;"><%= user.name %></span
           ><img class="icon_arrow" id="arrow" src="images/icons/arrow.svg" />
         </div>
         <img id="hamburger" src="images/icons/hamburger.svg" onclick="menu()" />
         <div><h1 class="title_carteirinha">Estabelecimentos</h1></div>
 
-<<<<<<< HEAD
-        <div id="more_options">
-          <div class="division">
-            <div class="up">
-              <img id="close" src="images/icons/close.svg" onclick="menu()" />
-              <div>Logado em <b>Nome de usuario</b></div>
-              <div><a href="/">Vizualizar carteirinha</a></div>
-              <div class="selected">
-                <a href="/estabelecimentos">Estabelecimentos</a>
-              </div>
-              <div>
-              <form action="/deslogar" method="post">
-                <input class="deslogar" type="submit" value="Sair">
-              </form>
-            </div>
-            </div>
 
-            <div class="down">
-              <div>
-                <img class="icon_help" src="images/icons/help_white.svg" />
-                Preciso de ajuda
-              </div>
-            </div>
-          </div>
-        </div>
-=======
-        <%- include('../partials/menu', {user : user }) %>
->>>>>>> dfa275fbeb4602543ea2ef04ef3369aa66d8dd04
+        <%- include('../partials/menu', {username : user }) %>
+
       </div>
     </header>
     <!-- Header End-->
@@ -122,24 +97,5 @@
 
     <!-- Scripts -->
     <script src="js/script.js"></script>
-    <script>
-      function search() {
-        var input, filter, container, card, name, i, txtValue;
-        input = document.getElementById("searchInput");
-        filter = input.value.toUpperCase();
-        container = document.getElementById("container");
-        card = container.getElementsByClassName("card");
-
-        for (i = 0; i < card.length; i++) {
-          name = card[i].getElementsByTagName("h1")[0];
-          txtValue = name.textContent || name.innerText;
-          if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            card[i].style.display = "";
-          } else {
-            card[i].style.display = "none";
-          }
-        }
-      }
-    </script>
   </body>
 </html>

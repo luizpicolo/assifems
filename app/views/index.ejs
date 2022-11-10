@@ -11,52 +11,15 @@
       </div>
 
       <div class="options">
-<<<<<<< HEAD
-        <div id="return" onclick="menu()">
-          <span style="cursor: pointer"><%= associate.name %></span
-          ><img class="icon_arrow" id="arrow" src="images/icons/arrow.svg" />
-=======
+
         <div id="return"  onclick="menu()">
-          <span>Nome de usuário</span>
+          <span><%= user.name %></span>
           <img class="icon_arrow" id="arrow" src="images/icons/arrow.svg" />
->>>>>>> dfa275fbeb4602543ea2ef04ef3369aa66d8dd04
         </div>
         <img id="hamburger" src="images/icons/hamburger.svg" onclick="menu()" />
         <div><h1 class="title_carteirinha">Carteirinha Digital</h1></div>
 
-<<<<<<< HEAD
-        <div id="more_options">
-          <div class="division">
-            <div class="up">
-              <img id="close" src="images/icons/close.svg" onclick="menu()" />
-              <div>
-                <a href="/">Logado em
-                  <b>
-                    <span style="color: #029450; font-size: 15px"><%= associate.name %></span>
-                  </b>
-                </a>
-              </div>
-              <div class="selected">Vizualizar carteirinha</div>
-              <div><a href="/estabelecimentos">Estabelecimentos</a></div>
-              <div>
-                <form action="/deslogar" method="post">
-                  <input class="deslogar" type="submit" value="Sair" />
-                </form>
-              </div>
-            </div>
-
-            <div class="down">
-              <div>
-                <a href="https://wa.me/556781321492">
-                  <img class="icon_help" src="images/icons/help_white.svg" />
-                  Preciso de ajuda</a>
-              </div>
-            </div>
-          </div>
-        </div>
-=======
-        <%- include('partials/menu', {user : user }) %>
->>>>>>> dfa275fbeb4602543ea2ef04ef3369aa66d8dd04
+        <%- include('partials/menu', {username : user }) %>
       </div>
     </header>
 
@@ -77,12 +40,11 @@
         <div class="left">
           <div
             class="photo"
-            style="background-image: url(<%= associate.photoURL %>)"
           ></div>
 
           <span>
             Status:
-            <span class="status"><%= associate.status %></span>
+            <span class="status"><%= user.status %></span>
           </span>
         </div>
 
@@ -96,7 +58,7 @@
           <div class="lines">
             <div class="data">
               <span class="red">Nome e Sobrenome:</span>
-              <span class="name"><%= associate.name %></span>
+              <span class="name"><%= user.name %></span>
             </div>
           </div>
 
@@ -108,7 +70,7 @@
             <div class="data">
               <span class="red">Data de Nascimento</span>
               <span>
-                <%= associate.birth_date.toLocaleDateString('pt-BR') %>
+                <%= user.birth_date %>
               </span>
             </div>
 
@@ -117,7 +79,7 @@
             <!--CPF -->
             <div class="data">
               <span class="red">CPF</span>
-              <span><%= associate.cpf %></span>
+              <span><%= user.cpf %></span>
             </div>
 
             <!--CPF End -->
@@ -125,7 +87,7 @@
             <!--RG -->
             <div class="data">
               <span class="red">RG</span>
-              <span><%= associate.rg %></span>
+              <span><%= user.rg %></span>
             </div>
             <!--RG End -->
           </div>
@@ -136,14 +98,14 @@
             <!--SIAPE -->
             <div class="data">
               <span class="red">SIAPE</span>
-              <span><%= associate.siape %></span>
+              <span><%= user.siape %></span>
             </div>
             <!--SIAPE End -->
 
             <!--Validity -->
             <div class="data">
               <span class="red">Validade da Carteirinha</span>
-              <span><%= associate.validity.toLocaleDateString('pt-BR') %></span>
+              <span><%= user.validity.toLocaleDateString('pt-BR') %></span>
             </div>
             <!--Validity End -->
           </div>
@@ -160,15 +122,15 @@
       <!-- Profile Photo -->
       <div
         class="photo"
-        style="background-image: url(<%= associate.photoURL %>)"></div>
+       ></div>
       <!-- Profile Photo End -->
 
       <!-- Name and Status -->
       <div>
-        <h1 class="red"><%= associate.name %></h1>
+        <h1 class="red"><%= user.name %></h1>
         <span>
           <span class="green">Status: </span>
-          <span class="status"><%= associate.status %></span>
+          <span class="status"><%= user.status %></span>
           </span>
       </div>
       <!-- Name and Status End -->
@@ -176,20 +138,20 @@
       <!-- Birthdate and Validity -->
       <div>
         <p>Data de nascimento</p>
-        <span class="green"><%= associate.birth_date.toLocaleDateString('pt-BR') %></span>
+        <span class="green"><%= user.birth_date %></span>
         <p>Validade da Carteirinha</p>
-        <span class="green"><%= associate.validity.toLocaleDateString('pt-BR') %></span>
+        <span class="green"><%= user.validity.toLocaleString('pt-BR') %></span>
       </div>
       <!-- Birthdate and Validity End -->
 
       <!-- DOCS -->
       <div class="green-box">
         <p class="green">CPF</p>
-        <span><%= associate.cpf %></span>
+        <span><%= user.cpf %></span>
         <p class="green">RG</p>
-        <span><%= associate.rg %></span>
+        <span><%= user.rg %></span>
         <p class="green">SIAPE</p>
-        <span><%= associate.siape %></span>
+        <span><%= user.siape %></span>
       </div>
       <img class="assifems" src="/images/assifems.png" />
       <!-- DOCS End -->

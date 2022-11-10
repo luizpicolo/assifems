@@ -1,14 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("components/container/container.css");
-@import url("components/footer/footer.css");
-@import url("components/menu/menu.css");
-@import url("establishments/establishments.css");
-@import url("login/login.css");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Outfit", sans-serif;
-}
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");@import url("login/login.css");@import url("components/container/container.css");@import url("components/footer/footer.css");@import url("components/menu/menu.css");@import url("establishments/establishments.css");*{margin:0;padding:0;box-sizing:border-box;font-family:"Outfit",sans-serif}a{text-decoration:none;color:inherit}body{background-color:#00a85a;display:flex;flex-direction:column;align-items:center;justify-content:start;height:100vh;row-gap:16px;padding:1vw 2vw}
 
 /*# sourceMappingURL=global.css.map */
