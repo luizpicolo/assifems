@@ -45,6 +45,12 @@
       color: $light;
       font-size: 5vw;
     }
+    .deslogar{
+      border: none;
+      color: $light;
+      background-color: $dark;
+
+    }
     .division {
       display: flex;
       flex-direction: column;
@@ -103,6 +109,7 @@
 
       .icon_arrow {
         height: 22px;
+        cursor: pointer;
       }
     }
 
@@ -112,7 +119,6 @@
     }
     .options {
       position: relative;
-      cursor: pointer;
     }
     .title_carteirinha {
       display: none;
@@ -128,11 +134,20 @@
       background-color: $light;
       right: 0;
       border: solid 2px;
-      width: 120%;
+      width: 180px;
       border-radius: 10px 0 10px 10px;
       z-index: 1;
       flex-direction: column;
       font-weight: 700;
+
+      .deslogar{
+        border: none;
+        color: black;
+        background-color: none;
+        background-color: white;
+        transition: 200ms;
+        font-weight: 700;
+      }
 
       .division {
         display: flex;
@@ -141,7 +156,7 @@
         height: 100%;
       }
       .down {
-        margin-top: 150px;
+        margin-top: 170px;
       }
       // Change the color of the selected item
       .selected {
@@ -159,6 +174,14 @@
           color: $light;
           transition: 200ms;
           cursor: pointer;
+          
+        }
+        &:hover .deslogar{
+          background-color: $dark;
+          color: $light;
+          transition: 200ms;
+          cursor: pointer;
+        
         }
 
         &:first-child {
@@ -177,6 +200,7 @@
           transition: 200ms;
           font-weight: 800;
           cursor: pointer;
+     
         }
       }
       .icon_help {
@@ -184,7 +208,7 @@
         &:hover {
           transition: 200ms;
           height: 12px;
-          cursor: pointer;
+
         }
       }
     }

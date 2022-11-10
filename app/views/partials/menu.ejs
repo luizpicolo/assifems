@@ -2,10 +2,14 @@
   <div class="division">
     <div class="up">
       <img id="close" src="images/icons/close.svg" onclick="menu()" />
-      <div>Logado em <b><%= user %></b></div>
-      <div class="selected">Vizualizar carteirinha</div>
+      <div>Logado em <b><%= username.name %></b></div>
+      <div class="selected"><a href="/">Vizualizar carteirinha</a></div>
       <div><a href="/estabelecimentos">Estabelecimentos</a></div>
-      <div>Sair</div>
+      <div>
+        <form action="/deslogar" method="post">
+          <input class="deslogar" type="submit" value="Sair" />
+        </form>
+      </div>
     </div>
 
     <div class="down">

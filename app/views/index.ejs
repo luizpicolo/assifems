@@ -11,14 +11,15 @@
       </div>
 
       <div class="options">
+
         <div id="return"  onclick="menu()">
-          <span>Nome de usuário</span>
+          <span><%= user.name %></span>
           <img class="icon_arrow" id="arrow" src="images/icons/arrow.svg" />
         </div>
         <img id="hamburger" src="images/icons/hamburger.svg" onclick="menu()" />
         <div><h1 class="title_carteirinha">Carteirinha Digital</h1></div>
 
-        <%- include('partials/menu', {user : user }) %>
+        <%- include('partials/menu', {username : user }) %>
       </div>
     </header>
 
@@ -37,9 +38,14 @@
       <div class="page">
         <!-- Left Side -->
         <div class="left">
-          <div class="photo"></div>
+          <div
+            class="photo"
+          ></div>
 
-          <span>Status:<span class="status">Inválida</span></span>
+          <span>
+            Status:
+            <span class="status"><%= user.status %></span>
+          </span>
         </div>
 
         <!-- Left End -->
@@ -52,7 +58,7 @@
           <div class="lines">
             <div class="data">
               <span class="red">Nome e Sobrenome:</span>
-              <span class="name">André Luís de Souza Lopes</span>
+              <span class="name"><%= user.name %></span>
             </div>
           </div>
 
@@ -63,7 +69,9 @@
             <!--Birth Date -->
             <div class="data">
               <span class="red">Data de Nascimento</span>
-              <span>99/99/9999</span>
+              <span>
+                <%= new Date(user.birth_date).toLocaleDateString('pt-BR') %>
+              </span>
             </div>
 
             <!--Birth Date End -->
@@ -71,7 +79,7 @@
             <!--CPF -->
             <div class="data">
               <span class="red">CPF</span>
-              <span>999.999.999-99</span>
+              <span><%= user.cpf %></span>
             </div>
 
             <!--CPF End -->
@@ -79,7 +87,7 @@
             <!--RG -->
             <div class="data">
               <span class="red">RG</span>
-              <span>999.999.999-99</span>
+              <span><%= user.rg %></span>
             </div>
             <!--RG End -->
           </div>
@@ -90,14 +98,14 @@
             <!--SIAPE -->
             <div class="data">
               <span class="red">SIAPE</span>
-              <span>999.999.999-99</span>
+              <span><%= user.siape %></span>
             </div>
             <!--SIAPE End -->
 
             <!--Validity -->
             <div class="data">
               <span class="red">Validade da Carteirinha</span>
-              <span>99/99/9999</span>
+              <span><%= new Date(user.validity).toLocaleDateString('pt-BR') %></span>
             </div>
             <!--Validity End -->
           </div>
@@ -112,39 +120,41 @@
 
     <container-mobile>
       <!-- Profile Photo -->
-      <div class="photo"></div>
+      <div
+        class="photo"
+       ></div>
       <!-- Profile Photo End -->
 
       <!-- Name and Status -->
       <div>
-        <h1 class="red">Nome e Sobrenome</h1>
-        <span
-          ><span class="green">Status: </span
-          ><span class="status">Inválida</span></span
-        >
+        <h1 class="red"><%= user.name %></h1>
+        <span>
+          <span class="green">Status: </span>
+          <span class="status"><%= user.status %></span>
+          </span>
       </div>
       <!-- Name and Status End -->
 
-       <!-- Birthdate and Validity -->
+      <!-- Birthdate and Validity -->
       <div>
         <p>Data de nascimento</p>
-        <span class="green">99/99/9999</span>
+        <span class="green"><%= new Date(user.birth_date).toLocaleDateString('pt-BR') %></span>
         <p>Validade da Carteirinha</p>
-        <span class="green">99/99/9999</span>
+        <span class="green"><%= new Date(user.validity).toLocaleString('pt-BR') %></span>
       </div>
-       <!-- Birthdate and Validity End -->
+      <!-- Birthdate and Validity End -->
 
-       <!-- DOCS -->
+      <!-- DOCS -->
       <div class="green-box">
         <p class="green">CPF</p>
-        <span>999.999.999-99</span>
+        <span><%= user.cpf %></span>
         <p class="green">RG</p>
-        <span>99.999.999-9</span>
+        <span><%= user.rg %></span>
         <p class="green">SIAPE</p>
-        <span>99.999.999-9</span>
+        <span><%= user.siape %></span>
       </div>
       <img class="assifems" src="/images/assifems.png" />
-       <!-- DOCS End -->
+      <!-- DOCS End -->
     </container-mobile>
 
     <!-- Footer -->

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#00A85A" />
+    <!--viewport para designers responsivos (mobo), content é a configuração-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheets/global.css" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="shortcut icon" href="images/icon_256.png" type="image/png" />
+    <link rel="apple-touch-icon" href="images/icon_256.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Estabelecimentos - ASSIFEMS</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div>
+        <img class="assifems" src="/images/assifems.png" />
+      </div>
+    </header>
+
+    <!-- Main Div -->
+    <container>
+      <!-- Desktop Title -->
+      <div class="title">
+        LOGIN
+      </div>
+      <!-- Title End -->
+
+      <!-- Main Content -->
+      <div class="login_page">
+        <div>
+        <h1>Insira seus dados para realizar login.</h1>
+        <form action="/" method="post">
+          <label for="cpf">CPF
+          <input
+            type="text"
+            name="cpf"
+            placeholder="999.999.999-99"
+            class="login_input"/>
+          </label>
+          <% if(error){%>
+       <span class="red"><b>*O CPF está incorreto. Verifique se há algum erro de digitação.</b></span>
+            <%  } %>
+          <button type="submit" class="button">
+            <b>
+              Entrar
+            </b>
+          </button>
+        </form>
+        </div>
+        <img src="images/assifems.png"/>
+      </div>
+      <!-- Main Content End -->
+    </container>
+
+    <!-- Footer -->
+    <footer>Desenvolvido por André Lopes, Igor Santana e Juan Silva.</footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

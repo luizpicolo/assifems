@@ -46,6 +46,21 @@ module.exports = {
         unique: true,
         type: DataTypes.STRING,
       },
+      photoURL: {
+        allowNull: true,
+        unique: false,
+        type: DataTypes.STRING,
+      },
+      createdAt: {
+        allowNull: false,
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.fn("NOW"),
+      },
+      updatedAt: {
+        allowNull: false,
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.fn("NOW"),
+      },
     });
   },
   down: async (queryInterface) => {

@@ -52,8 +52,9 @@
     .photo {
       width: 150px;
       aspect-ratio: 3/4;
-      background-color: #10140f;
       border-radius: 8px;
+      background-size: cover;
+      background-position: center;
     }
 
     .page {
@@ -139,7 +140,6 @@
     .photo {
       width: 25vw;
       aspect-ratio: 3/4;
-      background-color: #10140f;
       border-radius: 8px;
     }
 
