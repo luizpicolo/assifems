@@ -5,7 +5,11 @@
       <div>Logado em <b><%= username.name %></b></div>
       <div class="selected"><a href="/">Vizualizar carteirinha</a></div>
       <div><a href="/estabelecimentos">Estabelecimentos</a></div>
-      <div>Sair</div>
+      <div>
+        <form action="/deslogar" method="post">
+          <input class="deslogar" type="submit" value="Sair" />
+        </form>
+      </div>
     </div>
 
     <div class="down">

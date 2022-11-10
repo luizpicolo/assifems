@@ -70,7 +70,7 @@
             <div class="data">
               <span class="red">Data de Nascimento</span>
               <span>
-                <%= user.birth_date %>
+                <%= new Date(user.birth_date).toLocaleDateString('pt-BR') %>
               </span>
             </div>
 
@@ -105,7 +105,7 @@
             <!--Validity -->
             <div class="data">
               <span class="red">Validade da Carteirinha</span>
-              <span><%= user.validity.toLocaleDateString('pt-BR') %></span>
+              <span><%= new Date(user.validity).toLocaleDateString('pt-BR') %></span>
             </div>
             <!--Validity End -->
           </div>
@@ -138,9 +138,9 @@
       <!-- Birthdate and Validity -->
       <div>
         <p>Data de nascimento</p>
-        <span class="green"><%= user.birth_date %></span>
+        <span class="green"><%= new Date(user.birth_date).toLocaleDateString('pt-BR') %></span>
         <p>Validade da Carteirinha</p>
-        <span class="green"><%= user.validity.toLocaleString('pt-BR') %></span>
+        <span class="green"><%= new Date(user.validity).toLocaleString('pt-BR') %></span>
       </div>
       <!-- Birthdate and Validity End -->
 
