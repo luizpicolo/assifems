@@ -1980,10 +1980,10 @@ acorn@^8.5.0:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.8.1.tgz#0a3f9cbecc4ec3bea6f0a80b66ae8dd2da250b73"
   integrity sha512-7zFpHzhnqYKrkYdUjF1HI1bzd0VygEGX8lFk4k5zVMqHEoES+P+7TKI+EvLO9WVMJ8eekdO0aDEK044xTXwPPA==
 
-adminjs@^6.2.4:
-  version "6.4.1"
-  resolved "https://registry.yarnpkg.com/adminjs/-/adminjs-6.4.1.tgz#67a797cdf8ebe970488b922acb5d6f6300f29982"
-  integrity sha512-mM+8Wxx/0MiyylHkjnV6Ocev83bf567azAt8nXU01VnhMbHgxJCh9/2+Sk4MQNyD8OaRSP93ol4oiAWiTHPVqw==
+adminjs@^6.6.2:
+  version "6.6.2"
+  resolved "https://registry.yarnpkg.com/adminjs/-/adminjs-6.6.2.tgz#ffa47ed6d1b99b5d1b800ba4277d66904dc0d86f"
+  integrity sha512-r3nc6GhYrM9mT8/CXHCbA6OgzYxJa0hGhMzZGgeFz5ijpDa4feAG1QyY+hLKI2owigniDVkBlNuO6v70aVXdxg==
   dependencies:
     "@adminjs/design-system" "^3.0.3"
     "@babel/core" "^7.10.2"
@@ -4920,10 +4920,10 @@ node-releases@^2.0.6:
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.6.tgz#8a7088c63a55e493845683ebf3c828d8c51c5503"
   integrity sha512-PiVXnNuFm5+iYkLBNeq5211hvO38y63T0i2KKh2KnUs3RpzJ+JtODFjkD8yjLwnDkTYF1eKXheUwdssR+NRZdg==
 
-node-resque@^9.2.0:
-  version "9.2.0"
-  resolved "https://registry.yarnpkg.com/node-resque/-/node-resque-9.2.0.tgz#e1bd78220391a413c9f8df845a71b1875fdd997c"
-  integrity sha512-N2pOCtapV0RmIp/psg0kA03AqWmgBlr3WQECsEzjBTbKq45pFC16LJYTgYvTuceGZLplDVTusdiqLPVfe4cxwA==
+node-resque@^9.2.1:
+  version "9.2.1"
+  resolved "https://registry.yarnpkg.com/node-resque/-/node-resque-9.2.1.tgz#f02d3ba15a3694a3fde47d7065bbae163ed6611c"
+  integrity sha512-1m3WSaYKRz0KwxsX8mqyMojKoAqyLlWAqlMhZtOrzv8ztHAhJ24UhXSgwtGruw2+Lz5SpHdJLciblAlJzmin/g==
   dependencies:
     ioredis "^5.2.1"
 
@@ -6085,10 +6085,10 @@ sass-graph@^4.0.1:
     scss-tokenizer "^0.4.3"
     yargs "^17.2.1"
 
-sass@^1.55.0:
-  version "1.55.0"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.55.0.tgz#0c4d3c293cfe8f8a2e8d3b666e1cf1bff8065d1c"
-  integrity sha512-Pk+PMy7OGLs9WaxZGJMn7S96dvlyVBwwtToX895WmCpAOr5YiJYEUJfiJidMuKb613z2xNWcXCHEuOvjZbqC6A==
+sass@^1.56.1:
+  version "1.56.1"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.56.1.tgz#94d3910cd468fd075fa87f5bb17437a0b617d8a7"
+  integrity sha512-VpEyKpyBPCxE7qGDtOcdJ6fFbcpOM+Emu7uZLxVrkX8KVU/Dp5UF7WLvzqRuUhB6mqqQt1xffLoG+AndxTZrCQ==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"
@@ -6160,10 +6160,10 @@ send@0.18.0:
     range-parser "~1.2.1"
     statuses "2.0.1"
 
-sequelize-cli@^6.4.1:
-  version "6.5.1"
-  resolved "https://registry.yarnpkg.com/sequelize-cli/-/sequelize-cli-6.5.1.tgz#e084c82b11e86ed9bd7e47fde4e44cfbc6e81e2c"
-  integrity sha512-36hfZKNeZkIshp6L0jPVQ27xNLzgDPpiZokQsvo0M882AtAm+KhGOIViR0BecWb0Xz8+uSq03xxcl7RfMgyIRA==
+sequelize-cli@^6.5.2:
+  version "6.5.2"
+  resolved "https://registry.yarnpkg.com/sequelize-cli/-/sequelize-cli-6.5.2.tgz#8c0b061a213a550ba812029c0fabeb5a38843d2c"
+  integrity sha512-ltXvQOxFFb9pVuDqPJYOS3/X32OVni9zK1S0d0JfloSjmCKZmMDFBWndZbcbJH0QBfyxTt7FLt/kSmKwTRlbsQ==
   dependencies:
     cli-color "^2.0.3"
     fs-extra "^9.1.0"
@@ -6655,10 +6655,10 @@ trim-newlines@^3.0.0:
   dependencies:
     glob "^7.1.2"
 
-tslib@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
-  integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==
+tslib@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.1.tgz#0d0bfbaac2880b91e22df0768e55be9753a5b17e"
+  integrity sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==
 
 tunnel-agent@^0.6.0:
   version "0.6.0"

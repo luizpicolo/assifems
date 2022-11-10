@@ -6,7 +6,8 @@ exports.list = async function (req, res) {
     include: "category",
   });
   const categories = await Category.findAll();
-  res.render("establishments", { establishments, categories });
+  const user = req.session.user;
+  res.render("establishments", { establishments, categories, user });
 };
 
 exports.filter = async function (req, res) {
