@@ -1996,10 +1996,10 @@ acorn@^8.5.0:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.8.1.tgz#0a3f9cbecc4ec3bea6f0a80b66ae8dd2da250b73"
   integrity sha512-7zFpHzhnqYKrkYdUjF1HI1bzd0VygEGX8lFk4k5zVMqHEoES+P+7TKI+EvLO9WVMJ8eekdO0aDEK044xTXwPPA==
 
-adminjs@^6.6.2:
-  version "6.6.2"
-  resolved "https://registry.yarnpkg.com/adminjs/-/adminjs-6.6.2.tgz#ffa47ed6d1b99b5d1b800ba4277d66904dc0d86f"
-  integrity sha512-r3nc6GhYrM9mT8/CXHCbA6OgzYxJa0hGhMzZGgeFz5ijpDa4feAG1QyY+hLKI2owigniDVkBlNuO6v70aVXdxg==
+adminjs@^6.6.4:
+  version "6.6.4"
+  resolved "https://registry.yarnpkg.com/adminjs/-/adminjs-6.6.4.tgz#6c6dcca50d339a6612f1b80627b9ae5716823dfa"
+  integrity sha512-bNjTqFMTOaycytFxNRzogIGE/UnjANgPhtlEMvJbOdCeOq9f5bjVLhSi1azaZdH5H+Dt7pZDV6zW5hHAM9HQug==
   dependencies:
     "@adminjs/design-system" "^3.0.3"
     "@babel/core" "^7.10.2"
@@ -6785,6 +6785,7 @@ trim-newlines@^3.0.0:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/true-case-path/-/true-case-path-2.2.1.tgz#c5bf04a5bbec3fd118be4084461b3a27c4d796bf"
   integrity sha512-0z3j8R7MCjy10kc/g+qg7Ln3alJTodw9aDuVWZa3uiWqfuBMKeAeP2ocWcxoyM3D73yz3Jt/Pu4qPr4wHSdB/Q==
+
 tslib@^2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.1.tgz#0d0bfbaac2880b91e22df0768e55be9753a5b17e"
