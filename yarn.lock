@@ -62,10 +62,10 @@
     escape-regexp "0.0.1"
     flat "^5.0.0"
 
-"@adminjs/upload@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@adminjs/upload/-/upload-3.0.0.tgz#f16a0d4a246839105270c75823be69ba4f27601a"
-  integrity sha512-+dguz5/oc/4gpPHkjz7GVwCIR4O8rcTOMkE2gImhIBmeH53ejpRSLdTFRCsIeoIQIbyvcUBc7hyEd0ZULnbiZA==
+"@adminjs/upload@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@adminjs/upload/-/upload-3.0.1.tgz#0e638d5a93a03d455377070e786f183dbcb495c8"
+  integrity sha512-fUAM3xcQoRS9CeuzYCcc25lEw9Bs0/whhhHnXJT1SVfrQkLTQoNUdP1MbOj+uCsjU+OCxOih+QxQ7SIHT5Xwxw==
   optionalDependencies:
     "@google-cloud/storage" "^5.3.0"
     aws-sdk "^2.728.0"
