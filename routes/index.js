@@ -12,9 +12,7 @@ const jwt = require("jsonwebtoken");
 var { expressjwt: expressJWT } = require("express-jwt");
 
 // GLOBAL VARS
-var isLogged = false;
 const session = require("express-session");
-var associate = null;
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
@@ -37,9 +35,6 @@ router.post("/", async function (req, res, next) {
       expiresIn: 3600, // expires in 1 hour
     });
     res.cookie("token", token, { httpOnly: true });
-    isLogged = true;
-    associate = findAssociate;
-    res.render("index", { associate });
     req.session.user = findAssociate;
     console.log(req.session.user)
     res.render("index", { user: req.session.user });
@@ -49,7 +44,6 @@ router.post("/", async function (req, res, next) {
 });
 
 router.post("/deslogar", async function (req, res, next) {
-  isLogged = false;
   res.cookie("token", null, { httpOnly: true });
   req.session.user = null;
   res.render("login", { error: false });
