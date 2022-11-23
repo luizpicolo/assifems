@@ -409,6 +409,9 @@ a{
     font-size: 15px;
     color: black;
     padding: 10px 0 10px 10px;
+    &:focus{
+      outline: none;
+    }
   }
 
   .class_filter {
