@@ -6,6 +6,7 @@
 @import url('components/footer/footer.css');
 @import url('components/menu/menu.css');
 @import url('establishments/establishments.css');
+@import url("login/login.css");
 
 @mixin flex($direction, $align, $justify) {
   display: flex;

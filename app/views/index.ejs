@@ -1,27 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%- include('partials/head', {title : 'Carteirinha Digital - ASSIFEMS'}) %>
+    <%- include('partials/head', {title : 'Carteirinha Digital - ASSIFEMS', name: user.name}) %>
   </head>
   <body>
-    <!-- Header -->
-    <header>
-      <div>
-        <img class="assifems" src="/images/assifems.png" />
-      </div>
-
-      <div class="options">
-
-        <div id="return"  onclick="menu()">
-          <span><%= user.name %></span>
-          <img class="icon_arrow" id="arrow" src="images/icons/arrow.svg" />
-        </div>
-        <img id="hamburger" src="images/icons/hamburger.svg" onclick="menu()" />
-        <div><h1 class="title_carteirinha">Carteirinha Digital</h1></div>
-
-        <%- include('partials/menu', {username : user }) %>
-      </div>
-    </header>
 
     <!-- Main Div -->
     <container-desktop>

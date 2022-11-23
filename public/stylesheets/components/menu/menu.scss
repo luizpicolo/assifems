@@ -1,5 +1,6 @@
 @import '../../variables';
 
+
 @mixin flex($direction, $align, $justify) {
   display: flex;
   flex-direction: $direction;
@@ -20,7 +21,12 @@
     .assifems {
       display: none;
     }
-
+    .view_name{
+      cursor: pointer;
+    }
+    .associate_name{
+      color: #029450;
+    }
     #return {
       display: none;
     }
@@ -116,6 +122,12 @@
     .assifems {
       height: 40px;
       max-width: 100%;
+    }
+    .view_name{
+      cursor: pointer;
+    }
+    .associate_name{
+      color: #029450; 
     }
     .options {
       position: relative;
