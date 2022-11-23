@@ -1,0 +1,22 @@
+<div id="more_options">
+  <div class="division">
+    <div class="up">
+      <img id="close" src="images/icons/close.svg" onclick="menu()" />
+      <div>Logado em <b><%= username.name %></b></div>
+      <div class="selected"><a href="/">Vizualizar carteirinha</a></div>
+      <div><a href="/estabelecimentos">Estabelecimentos</a></div>
+      <div>
+        <form action="/deslogar" method="post">
+          <input class="deslogar" type="submit" value="Sair" />
+        </form>
+      </div>
+    </div>
+
+    <div class="down">
+      <div>
+        <img class="icon_help" src="images/icons/help_white.svg" />
+        Preciso de ajuda
+      </div>
+    </div>
+  </div>
+</div>

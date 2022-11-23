@@ -4,6 +4,26 @@
     <%- include('../partials/head', {title : 'Estabelecimento'}) %>
   </head>
   <body>
+    <!-- Header -->
+    <header>
+      <div>
+        <a href="/"><img class="assifems" src="/images/assifems.png" /></a>
+      </div>
+
+      <div class="options">
+        <div id="return" onclick="menu()">
+          <span style="cursor: pointer;"><%= user.name %></span
+          ><img class="icon_arrow" id="arrow" src="images/icons/arrow.svg" />
+        </div>
+        <img id="hamburger" src="images/icons/hamburger.svg" onclick="menu()" />
+        <div><h1 class="title_carteirinha">Estabelecimentos</h1></div>
+
+
+        <%- include('../partials/menu', {username : user }) %>
+
+      </div>
+    </header>
+    <!-- Header End-->
 
     <h1 class="title_estabelecimentos">ESTABELECIMENTOS</h1>
     <input
@@ -77,24 +97,5 @@
 
     <!-- Scripts -->
     <script src="js/script.js"></script>
-    <script>
-      function search() {
-        var input, filter, container, card, name, i, txtValue;
-        input = document.getElementById("searchInput");
-        filter = input.value.toUpperCase();
-        container = document.getElementById("container");
-        card = container.getElementsByClassName("card");
-
-        for (i = 0; i < card.length; i++) {
-          name = card[i].getElementsByTagName("h1")[0];
-          txtValue = name.textContent || name.innerText;
-          if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            card[i].style.display = "";
-          } else {
-            card[i].style.display = "none";
-          }
-        }
-      }
-    </script>
   </body>
 </html>

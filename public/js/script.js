@@ -35,3 +35,22 @@ if (visibility) {
     visibility = true;
   }
 }
+
+
+function search() {
+  var input, filter, container, card, name, i, txtValue;
+  input = document.getElementById("searchInput");
+  filter = input.value.toUpperCase();
+  container = document.getElementById("container");
+  card = container.getElementsByClassName("card");
+
+  for (i = 0; i < card.length; i++) {
+    name = card[i].getElementsByTagName("h1")[0];
+    txtValue = name.textContent || name.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      card[i].style.display = "";
+    } else {
+      card[i].style.display = "none";
+    }
+  }
+}
