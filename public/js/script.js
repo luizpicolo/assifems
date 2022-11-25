@@ -1,4 +1,13 @@
+//sw
+window.onload = () => {
+  "use strict";
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js");
+  }
+};
+
 //imports
+const body = document.querySelector("body");
 const returnMenu = document.getElementById("return");
 const resp_options = document.getElementById("more_options");
 const icon = document.getElementById("arrow");
@@ -10,14 +19,34 @@ var visibility = true;
 
 function menu() {
   if (visibility) {
-    resp_options.style.display = "block";
+    if (window.innerWidth < 600) {
+      resp_options.style.left = 0;
+      body.style.overflow = "hidden";
+    } else {
+      resp_options.style.transition = "height 500ms";
+      resp_options.style.height = "400px";
+      resp_options.style.left = "unset";
+      resp_options.style.right = 0;
+    }
+    resp_options.style.opacity = 1;
+
     icon.style.cssText = `
     transform: rotateX(180deg);
     transition: 500ms;
     `;
     visibility = false;
   } else {
-    resp_options.style.display = "none";
+    if (window.innerWidth < 600) {
+      resp_options.style.left = "-100%";
+      body.style.overflow = "unset";
+    } else {
+      resp_options.style.left = "inherit";
+      resp_options.style.right = 0;
+      resp_options.style.height = "0px";
+    }
+    resp_options.style.transition = "500ms";
+    resp_options.style.opacity = 0;
+
     visibility = true;
     icon.style.cssText = `
     transform: rotateX(0deg);
@@ -26,16 +55,15 @@ function menu() {
   }
 }
 
-function filtrar(){
-if (visibility) {
-  filter_options.style.display = "block";
+function filtrar() {
+  if (visibility) {
+    filter_options.style.display = "block";
     visibility = false;
   } else {
     filter_options.style.display = "none";
     visibility = true;
   }
 }
-
 
 function search() {
   var input, filter, container, card, name, i, txtValue;
