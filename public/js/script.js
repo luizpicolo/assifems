@@ -1,10 +1,10 @@
 //sw
-window.onload = () => {
-  "use strict";
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("sw.js");
-  }
-};
+// window.onload = () => {
+//   "use strict";
+//   if ("serviceWorker" in navigator) {
+//     navigator.serviceWorker.register("sw.js");
+//   }
+// };
 
 //imports
 const body = document.querySelector("body");
@@ -15,10 +15,10 @@ const hamburger = document.getElementById("hamburger");
 const close = document.getElementById("close");
 
 //globals
-var visibility = true;
+var isVisible = true;
 
-function menu() {
-  if (visibility) {
+function showMenu() {
+  if (isVisible) {
     if (window.innerWidth < 600) {
       resp_options.style.left = 0;
       body.style.overflow = "hidden";
@@ -34,7 +34,7 @@ function menu() {
     transform: rotateX(180deg);
     transition: 500ms;
     `;
-    visibility = false;
+    isVisible = false;
   } else {
     if (window.innerWidth < 600) {
       resp_options.style.left = "-100%";
@@ -47,7 +47,7 @@ function menu() {
     resp_options.style.transition = "500ms";
     resp_options.style.opacity = 0;
 
-    visibility = true;
+    isVisible = true;
     icon.style.cssText = `
     transform: rotateX(0deg);
     transition: 500ms;
@@ -56,12 +56,9 @@ function menu() {
 }
 
 function filtrar() {
-  if (visibility) {
+  filter_options.style.display = "none";
+  if (filter_options.style.display === 'none') {
     filter_options.style.display = "block";
-    visibility = false;
-  } else {
-    filter_options.style.display = "none";
-    visibility = true;
   }
 }
 
