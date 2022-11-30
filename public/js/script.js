@@ -6,7 +6,6 @@
 //   }
 // };
 
-//imports
 const body = document.querySelector("body");
 const returnMenu = document.getElementById("return");
 const resp_options = document.getElementById("more_options");
@@ -50,7 +49,7 @@ function showMenu() {
   }
 }
 
-function filtrar() {
+function filter() {
   if (filter_options.style.display === 'none' || filter_options.style.display === '') {
     filter_options.style.display = "block";
   } else{

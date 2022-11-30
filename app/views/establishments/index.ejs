@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%- include('../partials/head', {title : 'Estabelecimentos - ASSIFEMS', name: 'igor', selectedLink: 'estabelecimentos'}) %>
+    <%- include('../partials/head', {title : 'Estabelecimentos - ASSIFEMS', name: user.name, selectedLink: 'estabelecimentos'}) %>
   </head>
   <body>
 
@@ -14,10 +14,10 @@
       onkeyup="search()"
     />
     <div class="class_filter">
-      <img src="images/icons/filter.svg" onclick="filtrar()" />
+      <img src="images/icons/filter.svg" onclick="filter()" />
       <span
         style="color: #fffaf0"
-        onclick="filtrar()">
+        onclick="filter()">
         Filtrar
       </span>
     </div>
@@ -28,7 +28,7 @@
         <img
           id="close_filter"
           src="images/icons/close.svg"
-          onclick="filtrar()"
+          onclick="filter()"
         />
       </div>
 
