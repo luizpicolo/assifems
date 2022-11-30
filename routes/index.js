@@ -19,7 +19,7 @@ const session = require("express-session");
 router.get("/", function (req, res, next) {
   jwt.verify(req.cookies.token, process.env.SECRET, function (err, decode) {
     if (err) {
-      console.log('expirou')
+      console.log("expirou");
       res.render("login", { error: false });
     } else {
       const user = req.session.user;
@@ -40,6 +40,7 @@ router.post("/", async function (req, res, next) {
     });
     res.cookie("token", token, { httpOnly: true });
     req.session.user = findAssociate;
+
     res.render("index", { user: req.session.user });
   } else {
     res.render("login", { error: true });
