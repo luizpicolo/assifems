@@ -1,10 +1,10 @@
 //sw
-// window.onload = () => {
-//   "use strict";
-//   if ("serviceWorker" in navigator) {
-//     navigator.serviceWorker.register("sw.js");
-//   }
-// };
+window.onload = () => {
+  "use strict";
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js");
+  }
+};
 
 const body = document.querySelector("body");
 const returnMenu = document.getElementById("return");
