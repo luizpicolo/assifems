@@ -36,7 +36,7 @@ router.post("/", async function (req, res, next) {
   if (findAssociate != null) {
     const id = 1;
     const token = jwt.sign({ id }, process.env.SECRET, {
-      expiresIn: 20, // expires in 1 hour
+      expiresIn: 60 * 60 * 1, // expires in 1 hour
     });
     res.cookie("token", token, { httpOnly: true });
     req.session.user = findAssociate;

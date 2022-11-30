@@ -14,11 +14,8 @@ const icon = document.getElementById("arrow");
 const hamburger = document.getElementById("hamburger");
 const close = document.getElementById("close");
 
-//globals
-var isVisible = true;
-
 function showMenu() {
-  if (isVisible) {
+  if (resp_options.style.opacity == 0) {
     if (window.innerWidth < 600) {
       resp_options.style.left = 0;
       body.style.overflow = "hidden";
@@ -34,7 +31,6 @@ function showMenu() {
     transform: rotateX(180deg);
     transition: 500ms;
     `;
-    isVisible = false;
   } else {
     if (window.innerWidth < 600) {
       resp_options.style.left = "-100%";
@@ -47,7 +43,6 @@ function showMenu() {
     resp_options.style.transition = "500ms";
     resp_options.style.opacity = 0;
 
-    isVisible = true;
     icon.style.cssText = `
     transform: rotateX(0deg);
     transition: 500ms;
@@ -56,9 +51,10 @@ function showMenu() {
 }
 
 function filtrar() {
-  filter_options.style.display = "none";
-  if (filter_options.style.display === 'none') {
+  if (filter_options.style.display === 'none' || filter_options.style.display === '') {
     filter_options.style.display = "block";
+  } else{
+    filter_options.style.display = 'none'
   }
 }
 
