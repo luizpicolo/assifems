@@ -23,17 +23,17 @@
     </div>
 
     <div class="options">
-      <div id="return" onclick="menu()">
+      <div id="return" onclick="showMenu()">
         <span class="view_name"><%= name %></span
         ><img class="icon_arrow" id="arrow" src="images/icons/arrow.svg" />
       </div>
-      <img id="hamburger" src="images/icons/hamburger.svg" onclick="menu()" />
+      <img id="hamburger" src="images/icons/hamburger.svg" onclick="showMenu()" />
       <div><h1 class="title_carteirinha">Carteirinha Digital</h1></div>
 
       <div id="more_options">
         <div class="division">
           <div class="up">
-            <img id="close" src="images/icons/close.svg" onclick="menu()" />
+            <img id="close" src="images/icons/close.svg" onclick="showMenu()" />
             <div>
               <a href="/">Logado em
                 <b>
@@ -41,8 +41,8 @@
                 </b>
               </a>
             </div>
-            <div class="selected"><a href="/">Vizualizar carteirinha</a></div>
-            <div><a href="/estabelecimentos">Estabelecimentos</a></div>
+            <div class=<% if(selectedLink === 'carteirinha'){%> "selected" <%}%>><a href="/">Vizualizar carteirinha</a></div>
+            <div class=<% if(selectedLink === 'estabelecimentos'){%> "selected" <%}%>><a href="/estabelecimentos">Estabelecimentos</a></div>
             <div>
               <form action="/deslogar" method="post">
                 <input class="deslogar" type="submit" value="Sair" />

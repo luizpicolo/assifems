@@ -6,7 +6,6 @@ window.onload = () => {
   }
 };
 
-//imports
 const body = document.querySelector("body");
 const returnMenu = document.getElementById("return");
 const resp_options = document.getElementById("more_options");
@@ -14,11 +13,8 @@ const icon = document.getElementById("arrow");
 const hamburger = document.getElementById("hamburger");
 const close = document.getElementById("close");
 
-//globals
-var visibility = true;
-
-function menu() {
-  if (visibility) {
+function showMenu() {
+  if (resp_options.style.opacity == 0) {
     if (window.innerWidth < 600) {
       resp_options.style.left = 0;
       body.style.overflow = "hidden";
@@ -34,7 +30,6 @@ function menu() {
     transform: rotateX(180deg);
     transition: 500ms;
     `;
-    visibility = false;
   } else {
     if (window.innerWidth < 600) {
       resp_options.style.left = "-100%";
@@ -47,7 +42,6 @@ function menu() {
     resp_options.style.transition = "500ms";
     resp_options.style.opacity = 0;
 
-    visibility = true;
     icon.style.cssText = `
     transform: rotateX(0deg);
     transition: 500ms;
@@ -55,13 +49,11 @@ function menu() {
   }
 }
 
-function filtrar() {
-  if (visibility) {
+function filter() {
+  if (filter_options.style.display === 'none' || filter_options.style.display === '') {
     filter_options.style.display = "block";
-    visibility = false;
-  } else {
-    filter_options.style.display = "none";
-    visibility = true;
+  } else{
+    filter_options.style.display = 'none'
   }
 }
 

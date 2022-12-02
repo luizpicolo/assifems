@@ -54,7 +54,7 @@ app.use(
     algorithms: ["HS256"],
     getToken: (req) => req.cookies.token,
   }).unless({
-    path: ["/"],
+    path: ["/", "/estabelecimentos", "/deslogar"]
   })
 );
 

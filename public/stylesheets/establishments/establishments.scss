@@ -332,7 +332,6 @@
       width: 20vw;
       padding: 1rem;
       transition: 0.3s;
-      cursor: pointer;
 
       &:hover {
         box-shadow: 11px 10px 13px #029450;
@@ -360,6 +359,10 @@
         .address {
           color: $main-color;
           font-size: clamp(1rem, 1vw, 2rem);
+          &:hover{
+            text-decoration: underline;
+            transition: .5s;
+          }
         }
         .category {
           font-size: clamp(1rem, 1vw, 2rem);
@@ -723,7 +726,7 @@ a{
       width: 20vw;
       padding: 1rem;
       transition: 0.3s;
-      cursor: pointer;
+      
 
       &:hover {
         box-shadow: 11px 10px 13px #029450;
