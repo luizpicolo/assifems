@@ -68,8 +68,8 @@
         <div class="info">
           <h1 class="name"><%= establishment.name %></h1>
           <h4 class="category"><%= establishment.category.name %></h4>
-          <h3 class="address"><a href=<%= establishment.addressURL %>><%= establishment.address %></a></h3>
-          <a href="https://api.whatsapp.com/send?phone=55<%= establishment.cell %>"><button>Entrar em Contato</button></a>
+          <h3 class="address"><a href=<%= establishment.addressURL %> target="_blank"><%= establishment.address %></a></h3>
+          <a href="https://api.whatsapp.com/send?phone=55<%= establishment.cell %>" target="_blank"><button>Entrar em Contato</button></a>
         </div>
       </div>
       <% }); %>
