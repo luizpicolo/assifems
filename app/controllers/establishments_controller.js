@@ -1,5 +1,4 @@
-const { Establishment } = require("../models");
-const { Category } = require("../models");
+const { Establishment, Category } = require("../models");
 
 require("dotenv/config");
 const jwt = require("jsonwebtoken");
@@ -13,7 +12,6 @@ exports.list = async function (req, res) {
   });
   const categories = await Category.findAll();
   const user = req.session.user;
-
 
   jwt.verify(req.cookies.token, process.env.SECRET, function (err, decode) {
     if (err) {
