@@ -1,10 +1,10 @@
 //sw
-window.onload = () => {
-  "use strict";
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("sw.js");
-  }
-};
+// window.onload = () => {
+//   "use strict";
+//   if ("serviceWorker" in navigator) {
+//     navigator.serviceWorker.register("sw.js");
+//   }
+// };
 
 const body = document.querySelector("body");
 const returnMenu = document.getElementById("return");
@@ -49,11 +49,14 @@ function showMenu() {
   }
 }
 
-function filter() {
-  if (filter_options.style.display === 'none' || filter_options.style.display === '') {
+function openFilterMenu() {
+  if (
+    filter_options.style.display === "none" ||
+    filter_options.style.display === ""
+  ) {
     filter_options.style.display = "block";
-  } else{
-    filter_options.style.display = 'none'
+  } else {
+    filter_options.style.display = "none";
   }
 }
 
@@ -61,8 +64,7 @@ function search() {
   var input, filter, container, card, name, i, txtValue;
   input = document.getElementById("searchInput");
   filter = input.value.toUpperCase();
-  container = document.getElementById("container");
-  card = container.getElementsByClassName("card");
+  card = document.getElementsByClassName("card");
 
   for (i = 0; i < card.length; i++) {
     name = card[i].getElementsByTagName("h1")[0];
@@ -73,4 +75,11 @@ function search() {
       card[i].style.display = "none";
     }
   }
+}
+
+function clearCategories() {
+  const checkedInputs = document.querySelectorAll("input:checked");
+  checkedInputs.forEach((input) => {
+    input.checked = false;
+  });
 }
