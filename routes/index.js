@@ -19,7 +19,6 @@ const session = require("express-session");
 router.get("/", function (req, res, next) {
   jwt.verify(req.cookies.token, process.env.SECRET, function (err, decode) {
     if (err) {
-      console.log("expirou");
       res.render("login", { error: false });
     } else {
       const user = req.session.user;
