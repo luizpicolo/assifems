@@ -1,4 +1,4 @@
-@import '../variables';
+@import "../variables";
 
 @mixin flex($direction, $align, $justify) {
   display: flex;
@@ -91,12 +91,12 @@
       color: $light;
       font-weight: 300;
       height: 6.5vw;
-    transition: 500ms;
-    &:hover {
-      transform: scale(1.1);
       transition: 500ms;
+      &:hover {
+        transform: scale(1.1);
+        transition: 500ms;
+      }
     }
-  }
   }
 
   .container {
@@ -105,7 +105,10 @@
     flex-direction: column;
     gap: 3vw;
     overflow-y: scroll;
-
+    .error {
+      text-align: center;
+      color: $light;
+    }
     .card {
       display: flex;
       gap: 10px;
@@ -247,8 +250,7 @@
       h1 {
         font-weight: 300;
       }
-      #close_filter{
-
+      #close_filter {
         cursor: pointer;
       }
     }
@@ -291,13 +293,13 @@
       color: $light;
       font-weight: 300;
       height: 2.5vw;
-    transition: 500ms;
-    &:hover {
-      transform: scale(1.1);
-      cursor: pointer;
       transition: 500ms;
+      &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+        transition: 500ms;
+      }
     }
-  }
   }
 
   .container {
@@ -309,6 +311,11 @@
     justify-content: center;
     flex-wrap: wrap;
     overflow-y: scroll;
+
+    .error {
+      text-align: center;
+      color: $light;
+    }
 
     &::-webkit-scrollbar {
       width: 10px;
@@ -336,12 +343,11 @@
       &:hover {
         box-shadow: 11px 10px 13px #029450;
         transition: 0.3s;
-
       }
 
       .photo {
-   background-repeat: no-repeat;
-   background-size: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
         border-radius: 8px;
         width: 100%;
         aspect-ratio: 1/1;
@@ -359,9 +365,9 @@
         .address {
           color: $main-color;
           font-size: clamp(1rem, 1vw, 2rem);
-          &:hover{
+          &:hover {
             text-decoration: underline;
-            transition: .5s;
+            transition: 0.5s;
           }
         }
         .category {
@@ -369,24 +375,24 @@
           color: $secondary-color;
         }
       }
-a{
-      button {
-        border: 0;
-        background-color: $secondary-color;
-        color: $light;
-        border-radius: 4px;
-        width: 100%;
-        padding: 12px 8px;
-        font-size: clamp(1rem, 1vw, 2rem);
-        transition: 0.3s;
-
-        &:hover {
-          background-color: #b32428;
-          cursor: pointer;
+      a {
+        button {
+          border: 0;
+          background-color: $secondary-color;
+          color: $light;
+          border-radius: 4px;
+          width: 100%;
+          padding: 12px 8px;
+          font-size: clamp(1rem, 1vw, 2rem);
           transition: 0.3s;
+
+          &:hover {
+            background-color: #b32428;
+            cursor: pointer;
+            transition: 0.3s;
+          }
         }
       }
-    }
     }
   }
 }
@@ -412,7 +418,7 @@ a{
     font-size: 15px;
     color: black;
     padding: 10px 0 10px 10px;
-    &:focus{
+    &:focus {
       outline: none;
     }
   }
@@ -485,12 +491,12 @@ a{
       color: $light;
       font-weight: 300;
       height: 6.5vw;
-    transition: 500ms;
-    &:hover {
-      transform: scale(1.1);
       transition: 500ms;
+      &:hover {
+        transform: scale(1.1);
+        transition: 500ms;
+      }
     }
-  }
   }
 
   .container {
@@ -641,8 +647,7 @@ a{
       h1 {
         font-weight: 300;
       }
-      #close_filter{
-
+      #close_filter {
         cursor: pointer;
       }
     }
@@ -685,13 +690,13 @@ a{
       color: $light;
       font-weight: 300;
       height: 2.5vw;
-    transition: 500ms;
-    &:hover {
-      transform: scale(1.1);
-      cursor: pointer;
       transition: 500ms;
+      &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+        transition: 500ms;
+      }
     }
-  }
   }
 
   .container {
@@ -726,12 +731,10 @@ a{
       width: 20vw;
       padding: 1rem;
       transition: 0.3s;
-      
 
       &:hover {
         box-shadow: 11px 10px 13px #029450;
         transition: 0.3s;
-
       }
 
       .photo {
@@ -760,24 +763,24 @@ a{
           color: $secondary-color;
         }
       }
-a{
-      button {
-        border: 0;
-        background-color: $secondary-color;
-        color: $light;
-        border-radius: 4px;
-        width: 100%;
-        padding: 12px 8px;
-        font-size: clamp(1rem, 1vw, 2rem);
-        transition: 0.3s;
-
-        &:hover {
-          background-color: #b32428;
-          cursor: pointer;
+      a {
+        button {
+          border: 0;
+          background-color: $secondary-color;
+          color: $light;
+          border-radius: 4px;
+          width: 100%;
+          padding: 12px 8px;
+          font-size: clamp(1rem, 1vw, 2rem);
           transition: 0.3s;
+
+          &:hover {
+            background-color: #b32428;
+            cursor: pointer;
+            transition: 0.3s;
+          }
         }
       }
-    }
     }
   }
 }

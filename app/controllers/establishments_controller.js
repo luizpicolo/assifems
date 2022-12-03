@@ -17,7 +17,7 @@ exports.list = async function (req, res) {
     if (err) {
       res.redirect('/')
     }else{
-  res.render("establishments", { establishments, categories, user });}})
+  res.render("establishments", { establishments, categories, user, error: false });}})
 };
 
 exports.filter = async function (req, res) {
@@ -32,5 +32,9 @@ exports.filter = async function (req, res) {
     if (err) {
       res.redirect('/')
     }else{
-  res.render("establishments", { establishments, categories, user });}})
+      if(establishments.length > 0){
+  res.render("establishments", { establishments, categories, user, error: false });
+}
+res.render("establishments", { categories, user, error: true });
+}})
 };
