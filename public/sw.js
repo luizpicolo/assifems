@@ -1,9 +1,9 @@
-const PRECACHE = 'precache-v1';
+const PRECACHE = 'precache-v3';
 const RUNTIME = 'runtime';
 
 // A list of local resources we always want to be cached.
 const PRECACHE_URLS = [
-  '/', './public/**/*'
+  '/', '/js/script.js'
 ];
 
 self.addEventListener('install', event => {

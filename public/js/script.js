@@ -1,8 +1,7 @@
-//sw
 // window.onload = () => {
 //   "use strict";
 //   if ("serviceWorker" in navigator) {
-//     navigator.serviceWorker.register("sw.js");
+//     navigator.serviceWorker.register("../sw.js");
 //   }
 // };
 
@@ -62,17 +61,17 @@ function openFilterMenu() {
 
 function search() {
   var input, filter, container, card, name, i, txtValue;
-  input = document.getElementById("searchInput");
-  filter = input.value.toUpperCase();
-  card = document.getElementsByClassName("card");
+  input = document.getElementById("searchInput").value.toUpperCase();
+  cards = document.getElementsByClassName("card");
+  container = document.getElementById('container')
 
-  for (i = 0; i < card.length; i++) {
-    name = card[i].getElementsByTagName("h1")[0];
+  for (i = 0; i < cards.length; i++) {
+    name = cards[i].getElementsByTagName("h1")[0];
     txtValue = name.textContent || name.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      card[i].style.display = "";
+    if (txtValue.toUpperCase().indexOf(input) > -1) {
+      cards[i].style.display = "";
     } else {
-      card[i].style.display = "none";
+      cards[i].style.display = "none";
     }
   }
 }
