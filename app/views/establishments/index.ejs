@@ -14,10 +14,10 @@
       onkeyup="search()"
     />
     <div class="class_filter">
-      <img src="images/icons/filter.svg" onclick="filter()" />
+      <img src="images/icons/filter.svg" onclick="openFilterMenu()" alt="Icone de Filtrar"/>
       <span
         style="color: #fffaf0"
-        onclick="filter()">
+        onclick="openFilterMenu()">
         Filtrar
       </span>
     </div>
@@ -28,7 +28,8 @@
         <img
           id="close_filter"
           src="images/icons/close.svg"
-          onclick="filter()"
+          onclick="openFilterMenu()"
+          alt="Fechar menu"
         />
       </div>
 
@@ -57,18 +58,23 @@
     </div>
 
     <div class="container" id="container">
+     <% if(error){ %>
+
+<h1 class='error'>Nenhum estabelecimento</h1>
+      <% }else{ %>
       <% establishments.forEach(function(establishment){ %>
       <div class="card">
         <div class="photo" style="background-image: url(<%= establishment.imgURL.toString() %>)">
         </div>
         <div class="info">
           <h1 class="name"><%= establishment.name %></h1>
-          <h3 class="category"><%= establishment.category.name %></h3>
-          <h3 class="address"><a href=<%= establishment.addressURL %>><%= establishment.address %></a></h3>
-          <a href="https://api.whatsapp.com/send?phone=55<%= establishment.cell %>"><button>Entrar em Contato</button></a>
+          <h4 class="category"><%= establishment.category.name %></h4>
+          <h3 class="address"><a href=<%= establishment.addressURL %> target="_blank" aria-label="Link para acessar o endereço do estabelecimento via Google Maps."><%= establishment.address %></a></h3>
+          <a href="https://api.whatsapp.com/send?phone=55<%= establishment.cell %>" aria-label="Link para a conversa do Whatsapp do estabelecimento." target="_blank"><button>Entrar em Contato</button></a>
         </div>
       </div>
       <% }); %>
+      <% } %>
     </div>
 
     <!-- Footer -->

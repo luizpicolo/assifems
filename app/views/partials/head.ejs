@@ -3,46 +3,43 @@
 <!--viewport para designers responsivos (mobo), content é a configuração-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="/stylesheets/global.css" />
+<meta name="description" content="Aplicativo móvel para a carteirinha digital da Associação dos Servidores do Mato Grosso do Sul.">
 <link rel="manifest" href="manifest.json" />
 <link rel="shortcut icon" href="images/icon_256.png" type="image/png" />
 <link rel="apple-touch-icon" href="images/icon_256.png" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-/>
 <title><%= title %></title>
 
 <body>
   <!-- Header -->
   <header>
     <div>
-      <a href="/"><img class="assifems" src="/images/assifems.png" /></a>
+      <a href="/" aria-label="Link para a página inicial."><img class="assifems" src="/images/assifems.png" alt="Menu hambuguer"/></a>
     </div>
 
     <div class="options">
       <div id="return" onclick="showMenu()">
         <span class="view_name"><%= name %></span
-        ><img class="icon_arrow" id="arrow" src="images/icons/arrow.svg" />
+        ><img class="icon_arrow" id="arrow" src="images/icons/arrow.svg" alt="Icone arrow"/>
       </div>
-      <img id="hamburger" src="images/icons/hamburger.svg" onclick="showMenu()" />
+      <img id="hamburger" src="images/icons/hamburger.svg" onclick="showMenu()" alt="Menu hambuguer" />
       <div><h1 class="title_carteirinha">Carteirinha Digital</h1></div>
 
       <div id="more_options">
         <div class="division">
           <div class="up">
-            <img id="close" src="images/icons/close.svg" onclick="showMenu()" />
+            <img id="close" src="images/icons/close.svg" onclick="showMenu()" alt="Fechar menu"/>
             <div>
-              <a href="/">Logado em
+              <a href="/" aria-label="Link para a página inicial.">Logado em
                 <b>
                   <span class="associate_name"><%= name %></span>
                 </b>
               </a>
             </div>
-            <div class=<% if(selectedLink === 'carteirinha'){%> "selected" <%}%>><a href="/">Vizualizar carteirinha</a></div>
-            <div class=<% if(selectedLink === 'estabelecimentos'){%> "selected" <%}%>><a href="/estabelecimentos">Estabelecimentos</a></div>
+            <div class=<% if(selectedLink === 'carteirinha'){%> "selected" <%}%>><a href="/" aria-label="Link para a página inicial.">Vizualizar carteirinha</a></div>
+            <div class=<% if(selectedLink === 'estabelecimentos'){%> "selected" <%}%>><a href="/estabelecimentos" aria-label="Link para a página dos estabelecimentos.">Estabelecimentos</a></div>
             <div>
               <form action="/deslogar" method="post">
                 <input class="deslogar" type="submit" value="Sair" />
@@ -52,8 +49,8 @@
 
           <div class="down">
             <div>
-              <a href="https://wa.me/556781321492">
-                <img class="icon_help" src="images/icons/help_white.svg" />
+              <a href="https://wa.me/556781321492" aria-label="Link para o contato do presidente da ASSIFEMS.">
+                <img class="icon_help" src="images/icons/help_white.svg" alt="Icone de ajuda"/>
                 Preciso de ajuda</a>
             </div>
           </div>

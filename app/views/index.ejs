@@ -10,8 +10,8 @@
       <!-- Desktop Title -->
       <div class="title">
         CARTEIRINHA DIGITAL
-        <a href="https://wa.me/556781321492">
-          <img src="images/icons/help.svg" />
+        <a href="https://wa.me/556781321492" aria-label="Entre em contato com o estabelecimento.">
+          <img src="images/icons/help.svg" alt="Icone de ajuda"/>
         </a>
       </div>
       <!-- Title End -->
@@ -124,7 +124,7 @@
         <p>Data de nascimento</p>
         <span class="green"><%= new Date(user.birth_date).toLocaleDateString('pt-BR') %></span>
         <p>Validade da Carteirinha</p>
-        <span class="green"><%= new Date(user.validity).toLocaleString('pt-BR') %></span>
+        <span class="green"><%= new Date(user.validity).toLocaleDateString('pt-BR') %></span>
       </div>
       <!-- Birthdate and Validity End -->
 
@@ -137,7 +137,7 @@
         <p class="green">SIAPE</p>
         <span><%= user.siape %></span>
       </div>
-      <img class="assifems" src="/images/assifems.png" />
+      <img class="assifems" src="/images/assifems.png" alt="Logo assifems"/>
       <!-- DOCS End -->
     </container-mobile>
 
