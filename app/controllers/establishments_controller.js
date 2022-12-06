@@ -16,8 +16,10 @@ exports.list = async function (req, res) {
   jwt.verify(req.cookies.token, process.env.SECRET, function (err, decode) {
     if (err) {
       res.redirect('/')
-    }else{
-  res.render("establishments", { establishments, categories, user });}})
+    } else {
+      res.render("establishments", { establishments, categories, user });
+    }
+  })
 };
 
 exports.filter = async function (req, res) {
@@ -31,6 +33,8 @@ exports.filter = async function (req, res) {
   jwt.verify(req.cookies.token, process.env.SECRET, function (err, decode) {
     if (err) {
       res.redirect('/')
-    }else{
-  res.render("establishments", { establishments, categories, user });}})
+    } else {
+      res.render("establishments", { establishments, categories, user });
+    }
+  })
 };
