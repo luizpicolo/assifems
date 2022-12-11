@@ -3,6 +3,7 @@
 # Carteirinha Digital - ASSIFEMS
 
 ## Apresentação do Projeto
+![pwa_scores](https://user-images.githubusercontent.com/86114583/206917545-3c5d4a7f-7a8b-4296-bb0e-4fe5f99c2b5e.png)
 
 Este projeto consiste na elaboração de uma
 Progressive Web App para a digitalização da
