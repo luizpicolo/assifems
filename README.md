@@ -1,9 +1,8 @@
 ![banner_markdown](https://user-images.githubusercontent.com/86114583/206916809-f5389454-e0af-4cb1-b902-e9a11990d1e7.png)
 
-# Carteirinha Digital - ASSIFEMS
+<h1 align="center"> Carteirinha Digital - ASSIFEMS </h1>
 
 ## Apresentação do Projeto
-![pwa_scores](https://user-images.githubusercontent.com/86114583/206917545-3c5d4a7f-7a8b-4296-bb0e-4fe5f99c2b5e.png)
 
 Este projeto consiste na elaboração de uma
 Progressive Web App para a digitalização da
@@ -22,7 +21,82 @@ e pode ser acessado utilizando o link abaixo:
 
 ## 🖥️ - Demonstração
 
-## Tecnologias
+
+## 📈 - Pontuação da PWA
+![pwa_scores](https://user-images.githubusercontent.com/86114583/206917545-3c5d4a7f-7a8b-4296-bb0e-4fe5f99c2b5e.png)
+
+## 🔌 - Tecnologias
+
+- NodeJS
+- HTML
+- JavaScript
+- SCSS
+- Express
+- Docker
+- EJS
+- AdminJS
+- Sequelize
+
+## Requisitos
+
+Abaixo você confere os requisitos para rodar o projeto localmente:
+
+- Editor de Código
+- NodeJS
+- Git
+- WSL
+- Docker
+
+## Rodando Localmente
+
+Para rodar a aplicação na sua máquina, você deve seguir os passos abaixo:
+
+
+### Clone o projeto e acesse o diretório
+```bash
+  git clone https://github.com/igorviniciussantana/assifems.git
+  cd assifems
+```
+### Configure seus dados do banco
+
+Utilizando o arquivo `.env.example`, insira os dados do seu banco
+```bash
+ # SECRET KEY
+SECRET=
+
+# Postgres Database
+DB_USER=
+DB_PASSWORD=
+DB_NAME=
+DB_HOST=
+DB_PORT=
+DB_DIALECT=
+```
+
+### Configure o container
+
+Utilize os comandos abaixo para criar o container e o banco de dados
+
+```bash
+docker compose -f docker-compose.yml -f compose/dev.yml build
+docker compose -f docker-compose.yml -f compose/dev.yml run web yarn
+docker compose -f docker-compose.yml -f compose/dev.yml run web yarn sequelize db:create
+docker compose -f docker-compose.yml -f compose/dev.yml run web yarn sequelize db:migrate
+```
+
+### Semeie o banco
+
+Utilize o comando abaixo para adicionar dados prontos no seu banco
+
+```bash
+docker-compose run web yarn sequelize db:seed:all  
+```
+
+Finalmente poderemos rodar a aplicação com o comando abaixo
+
+```bash
+docker compose -f docker-compose.yml -f compose/dev.yml up
+```
 
 ## Como contribuir
 
