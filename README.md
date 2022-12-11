@@ -2,7 +2,7 @@
 
 <h1 align="center"> Carteirinha Digital - ASSIFEMS </h1>
 
-## Apresentação do Projeto
+## 📃 - Apresentação do Projeto
 
 Este projeto consiste na elaboração de uma
 Progressive Web App para a digitalização da
@@ -19,7 +19,7 @@ e pode ser acessado utilizando o link abaixo:
 
 - [Protótipo - Figma](https://www.figma.com/community/file/1180882217288338090)
 
-## 🖥️ - Demonstração
+## 👁️ - Demonstração
 
 
 ## 📈 - Pontuação da PWA
@@ -37,7 +37,7 @@ e pode ser acessado utilizando o link abaixo:
 - AdminJS
 - Sequelize
 
-## Requisitos
+## ❓ - Requisitos
 
 Abaixo você confere os requisitos para rodar o projeto localmente:
 
@@ -47,7 +47,7 @@ Abaixo você confere os requisitos para rodar o projeto localmente:
 - WSL
 - Docker
 
-## Rodando Localmente
+## 🖥️ - Rodando Localmente
 
 Para rodar a aplicação na sua máquina, você deve seguir os passos abaixo:
 
@@ -97,8 +97,6 @@ Finalmente poderemos rodar a aplicação com o comando abaixo
 ```bash
 docker compose -f docker-compose.yml -f compose/dev.yml up
 ```
-
-## Como contribuir
 
 ## 👥 - Autores
 
