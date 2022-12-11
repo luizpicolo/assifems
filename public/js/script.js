@@ -60,10 +60,10 @@ function openFilterMenu() {
 }
 
 function search() {
-  var input, filter, container, card, name, i, txtValue;
+  var input, container, name, i, txtValue;
   input = document.getElementById("searchInput").value.toUpperCase();
   cards = document.getElementsByClassName("card");
-  container = document.getElementById('container')
+  container = document.getElementById("container");
 
   for (i = 0; i < cards.length; i++) {
     name = cards[i].getElementsByTagName("h1")[0];
