@@ -1,4 +1,4 @@
-@import '../../variables';
+@import "../../variables";
 
 .red {
   color: $secondary-color;
@@ -145,15 +145,15 @@
       background-position: center;
     }
 
-    .nameSurname{
-     width: 80%;
-     display: flex;
-     flex-direction: column;
-     row-gap: 12px;
-    .red {
-      font-size: clamp(2rem, 5vw, 4rem);
+    .nameSurname {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+      .red {
+        font-size: clamp(2rem, 5vw, 4rem);
+      }
     }
-  }
     p,
     span {
       font-size: clamp(1.6rem, 2.5vw, 3rem);
