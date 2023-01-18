@@ -7,7 +7,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "@adminjs/express": "^5.0.0",
+    "@adminjs/express": "^5.1.0",
     "@adminjs/sequelize": "^3.0.0",
     "@adminjs/upload": "^3.0.1",
     "adminjs": "^6.7.0",
